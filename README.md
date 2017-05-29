@@ -1,3 +1,3 @@
 ## Welcome to my study room
 
-limedessert의 공부방입니다.
+Lime Dessert의 공부방입니다.
