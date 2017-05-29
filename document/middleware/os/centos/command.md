@@ -6,7 +6,7 @@
 1. [Password 확인](#password-확인)
 1. [Passward 변경](#passward-변경)
 1. [Group 관리](#group-관리)
-1. [User ](#user-관리)
+1. [User 관리](#user-관리)
 1. [파일 검색](#파일-검색)
 
 * * *
