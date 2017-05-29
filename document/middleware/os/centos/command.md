@@ -6,7 +6,7 @@
 1. [Password 확인](#password-확인)
 1. [Passward 변경](#passward-변경)
 1. [Group 관리](#group-관리)
-1. [User 정보 확인](#user-정보-확인)
+1. [User ](#user-관리)
 1. [파일 검색](#파일-검색)
 
 * * *
@@ -82,7 +82,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 * * *
 
-### User 정보 확인
+### User 
 
 #### * Command
 
