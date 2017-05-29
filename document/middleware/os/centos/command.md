@@ -6,6 +6,7 @@
 1. [Password 확인](#password-확인)
 
 * * *
+
 ### 전체 계정 목록 확인
 
 #### h2 * Command
@@ -27,6 +28,7 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 ```
 
 * * *
+
 ### Password 확인
 
 #### * Command
@@ -47,6 +49,22 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 (7) Inactive: 로그인 접속 차단 일수
 (8) Expire: 로그인 사용 금지 일수(월/일/연도)
 (9) Reserved: 사용안함
+```
+
+* * *
+
+### Group 확인, 생성, 매핑
+
+#### * Command
+
+User Group 확인
+```text
+]# cat /etc/group          => User Group 확인
+]# groupadd admin          => Group ID의 마지막 다음 번호로 ID가 생성됨(500이 최소)
+]# groupadd -g 1000 admin  => ID 를 지정하여 생성하는 방법
+]# groupadd -r sysadmin    => 시스템용 그룹 (GID 499 이하)을 생성
+                              (-r 옵션 사용 시 0 번 부터 499 까지에서 미 할당 GID 중 가장 높은 번호를 할당)
+]# gpasswd -a aaa ggg      => aaa 사용자를 ggg 그룹에 설정
 ```
 
 * * *
