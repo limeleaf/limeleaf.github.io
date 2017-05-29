@@ -13,7 +13,7 @@
 
 ### 전체 계정 목록 확인
 
-#### h2 * Command
+#### * Command
 ```text
 ]# cat /etc/passwd
 ```
