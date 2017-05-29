@@ -3,10 +3,10 @@
 목차
 
 1. [전체 계정 목록 확인](#전체-계정-목록-확인)
-1. [Password 확인](#shadow)
+1. [Password 확인](#password-확인)
 
 * * *
-### [](#passwd)전체 계정 목록 확인
+### 전체 계정 목록 확인
 
 #### h2 * Command
 ```text
@@ -27,8 +27,7 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 ```
 
 * * *
-
-### [](#shadow)Password 확인
+### Password 확인
 
 #### * Command
 ```text
