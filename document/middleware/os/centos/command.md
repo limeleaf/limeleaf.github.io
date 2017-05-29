@@ -4,7 +4,7 @@
 
 1. [전체 계정 목록 확인](#전체-계정-목록-확인)
 1. [Password 확인](#password-확인)
-1. [Group 확인 및 생성](#group-확인-및-생성)
+1. [Group 관리](#group-관리)
 
 * * *
 
@@ -54,7 +54,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 * * *
 
-### Group 확인 및 생성
+### Group 
 
 #### * Command
 
