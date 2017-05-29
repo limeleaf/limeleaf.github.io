@@ -2,11 +2,11 @@
 
 목차
 
-1. [[전체 계정 목록 확인]](#passwd)
-1. [Password 확인](#shadow)
+1. [전체 계정 목록 확인](/document/middleware/os/centos/command#passwd)
+1. [Password 확인](#Password 확인)
 
 * * *
-### (#passwd)전체 계정 목록 확인
+### [](#passwd)전체 계정 목록 확인
 
 #### h2 * Command
 ```text
