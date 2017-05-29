@@ -4,7 +4,10 @@
 
 1. [전체 계정 목록 확인](#전체-계정-목록-확인)
 1. [Password 확인](#password-확인)
+1. [Passward 변경](#passward-변경)
 1. [Group 관리](#group-관리)
+1. [User 정보 확인](#user-정보-확인)
+1. [파일 검색](#파일-검색)
 
 * * *
 
@@ -54,21 +57,54 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 * * *
 
+### Passward 변경
+
+#### * Command
+```text
+]# passwd
+]# passwd admin
+```
+
+* * *
+
 ### Group 관리
 
 #### * Command
 
-User Group 확인
 ```text
-]# cat /etc/group          => User Group 확인
-]# groupadd admin          => Group ID의 마지막 다음 번호로 ID가 생성됨(500이 최소)
-]# groupadd -g 1000 admin  => ID 를 지정하여 생성하는 방법
-]# groupadd -r sysadmin    => 시스템용 그룹 (GID 499 이하)을 생성
+]# cat /etc/group          => User Group 확인
+]# groupadd admin          => "admin" Group을 생성(Group ID의 마지막 다음 번호로 ID가 생성됨, 500이 최소값)
+]# groupadd -g 1000 admin  => ID가 "1000"인 "admin" Group을 생성(ID 를 지정하여 생성)
+]# groupadd -r sysadmin    => "sysadm" Group을 시스템용 그룹으로 생성(GID 499 이하)
                               (-r 옵션 사용 시 0 번 부터 499 까지에서 미 할당 GID 중 가장 높은 번호를 할당)
-]# gpasswd -a aaa ggg      => aaa 사용자를 ggg 그룹에 설정
+]# gpasswd -a aaa ggg      => "aaa" 사용자를 "ggg" 그룹에 설정
+```
+
+* * *
+
+### User 정보 확인
+
+#### * Command
+
+```text
+]# id -g admin  => User 기본 그룹의 gid를 출력
+]# id -G admin  => User가 속한 모든 그룹의 gid를 출력
+]# id -u admin  => 사용자의 uid를 출력
+```
+> -n : 위 옵션과 함께 사용해 숫자 대신 이름 출력
+
+* * *
+
+### 파일 검색
+
+#### * Command
+
+```text
+]# find . -name "*.war" -print  => 현재 디렉토리에서 name "*.war"을 찾아 출력
 ```
 
 * * *
 
 ### [References]
-N/A
+1. http://webdir.tistory.com/134  
+1. http://as-one.tistory.com/entry/CentOS-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC
