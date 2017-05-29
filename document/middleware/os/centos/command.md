@@ -100,7 +100,10 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 #### * Command
 
 ```text
-]# find . -name "*.war" -print  => 현재 디렉토리에서 name "*.war"을 찾아 출력
+]# find . -name '*.war'  => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
+]# find / -name '*.war'  => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 출력
+]# find / -name '*.war' -ls => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 ls 형식으로 출력
+]# find . -name 'std*' -type d => 현재 디렉토리 하위에서 이름이 'std*'인 디렉토리를 찾아 출력
 ```
 
 * * *
