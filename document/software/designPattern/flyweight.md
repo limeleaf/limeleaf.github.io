@@ -15,5 +15,4 @@
 [References]
 
 1. [https://ko.wikipedia.org/wiki/플라이웨이트_패턴](https://ko.wikipedia.org/wiki/플라이웨이트_패턴)
-
 1. [http://terms.naver.com/entry.nhn?docId=3532969&categoryId=58528&cid=58528](http://terms.naver.com/entry.nhn?docId=3532969&categoryId=58528&cid=58528)
