@@ -3,14 +3,14 @@
 목차
 
 1. [User 관리](#user-관리)
-1. [Passward 변경](#passward-관리)
+1. [Passward 관리](#passward-관리)
 1. [Group 관리](#group-관리)
 1. [파일 관리](#파일-관리)
 1. [네트워크 관련](네트워크-관련)
 
 * * *
 
-### User 관리 
+### User 관련
 
 #### * User 정보 확인
 
