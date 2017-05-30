@@ -14,6 +14,6 @@
 * * *
 [References]
 
-1. [https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4](https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4)
+1. [https://ko.wikipedia.org/wiki/플라이웨이트_패턴](https://ko.wikipedia.org/wiki/플라이웨이트_패턴)
 
 1. [http://terms.naver.com/entry.nhn?docId=3532969&categoryId=58528&cid=58528](http://terms.naver.com/entry.nhn?docId=3532969&categoryId=58528&cid=58528)
