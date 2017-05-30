@@ -3,10 +3,10 @@
 목차
 
 1. [User 관리](#user-관리)
-1. [Passward 관리](#passward-관리)
+1. [Password 관리](#password 관리)
 1. [Group 관리](#group-관리)
 1. [파일 관리](#파일-관리)
-1. [네트워크 관련](네트워크-관련)
+1. [네트워크 관련](#네트워크-관련)
 
 * * *
 
@@ -63,7 +63,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 (9) Reserved: 사용안함
 ```
 
-#### Passward 변경
+#### Password 변경
 
 ```text
 ]$ passwd
