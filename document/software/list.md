@@ -2,8 +2,8 @@
 
 ## 2. Design pattern
 
+- [Flyweight Pattern](/document/software/designPattern/flyweight)
 - [Strategy Pattern](/document/software/designPattern/strategy)
-
 - [Observer Pattern](/document/software/designPattern/observer)
 
 ## 3. S/W Language
