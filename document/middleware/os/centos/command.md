@@ -99,7 +99,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 #### * 파일 압축/해제
 
 ```text
-]$ tar -cvzf aa.tar.gz directoryA directoryB  => 디렉토리A와 B를 aa.tar.gz로 압축
+]$ tar -cvzf aa.tar.gz dirA dirB  => 디렉토리 A와 B를 aa.tar.gz로 압축
 ]$ tar -xvf abc.tar       => tar 압축 해제
 ]$ tar -xzvf abc.tar.gz   => tar.gz 압축 해제
 ```
