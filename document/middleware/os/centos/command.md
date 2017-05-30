@@ -2,23 +2,28 @@
 
 목차
 
-1. [전체 계정 목록 확인](#전체-계정-목록-확인)
-1. [Password 확인](#password-확인)
+1. [User 관리](#user-관리)
 1. [Passward 변경](#passward-변경)
 1. [Group 관리](#group-관리)
-1. [User 관리](#user-관리)
 1. [파일 검색](#파일-검색)
 
 * * *
 
-### 전체 계정 목록 확인
+### User 관리 
 
-#### * Command
+#### * User 정보 확인
+
+```text
+]# id -g admin  => User 기본 그룹의 gid를 출력
+]# id -G admin  => User가 속한 모든 그룹의 gid를 출력
+]# id -u admin  => 사용자의 uid를 출력
+```
+> -n : 위 옵션과 함께 사용해 숫자 대신 이름 출력
+
+#### * 전체 계정 목록 확인
+
 ```text
 ]# cat /etc/passwd
-```
-#### * Result
-```text
 root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 (1)    (2)   (3)   (4)    (5)       (6)         (7)
 
@@ -33,14 +38,12 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 
 * * *
 
-### Password 확인
+### Password 관리
 
-#### * Command
+#### Password 확인
+
 ```text
 ]# cat /etc/shadow
-```
-#### * Result
-```text
 Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 (1)                (2)                     (3)  (4)   (5)   (6)   (7)    (8)    (9)
 
@@ -55,11 +58,8 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 (9) Reserved: 사용안함
 ```
 
-* * *
+#### Passward 변경
 
-### Passward 변경
-
-#### * Command
 ```text
 ]# passwd
 ]# passwd admin
@@ -68,8 +68,6 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 * * *
 
 ### Group 관리
-
-#### * Command
 
 ```text
 ]# cat /etc/group          => User Group 확인
@@ -82,22 +80,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 * * *
 
-### User 관리
-
-#### * Command
-
-```text
-]# id -g admin  => User 기본 그룹의 gid를 출력
-]# id -G admin  => User가 속한 모든 그룹의 gid를 출력
-]# id -u admin  => 사용자의 uid를 출력
-```
-> -n : 위 옵션과 함께 사용해 숫자 대신 이름 출력
-
-* * *
-
 ### 파일 검색
-
-#### * Command
 
 ```text
 ]# find . -name '*.war'  => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
