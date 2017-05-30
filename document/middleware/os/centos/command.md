@@ -43,7 +43,7 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 
 ### Password 관리
 
-#### Password 확인
+#### * Password 확인
 
 ```text
 ]$ cat /etc/shadow
@@ -63,7 +63,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 (9) Reserved: 사용안함
 ```
 
-#### Password 변경
+#### * Password 변경
 
 ```text
 ]$ passwd
@@ -87,7 +87,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 ### 파일 관리
 
-#### 파일 검색
+#### * 파일 검색
 
 ```text
 ]$ find . -name '*.war'  => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
@@ -96,7 +96,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 ]$ find / -name '*.war' -ls => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 ls 형식으로 출력
 ]$ find . -name 'std*' -type d => 현재 디렉토리 하위에서 이름이 'std*'인 디렉토리를 찾아 출력
 ```
-#### 파일 압축/해제
+#### * 파일 압축/해제
 
 ```text
 ]$ tar -cvzf aa.tar.gz directoryA directoryB  => 디렉토리A와 B를 aa.tar.gz로 압축
@@ -104,7 +104,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 ]$ tar -xzvf abc.tar      => tar.gz 압축 해제
 ```
 
-#### 파일 이동
+#### * 파일 이동
 ```text
 ]$ mv ./* ../     => 현재 디렉토리의 모든 디렉토리 및 파일을 상위로 이동
 ```
@@ -113,7 +113,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 ### 네트워크 관련
 
-#### Port 확인
+#### * Port 확인
 ```text
 ]$ netstate -ant | grep LISTEN | grep 80  => LISTEN 하고있는 80포트
 ]$ netstate -ant | grep 80                => 80포트의 연결상태
@@ -121,7 +121,7 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 ]$ netstate -ant | grep LISTEN            => LISTEN 하고 있는 모든 포트
 ```
 
-#### SFTP 연결
+#### * SFTP 연결
 ```text
 ]$ sftp root@123.456.7.8      => sftp로 다른 Server에 접속 
 ls                            => 상대 Server에서 수행하는 ls 명령어
