@@ -90,11 +90,11 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 #### * 파일 검색
 
 ```text
-]$ find . -name '*.war'  => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
+]$ find . -name '*.war'           => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
 ]$ find . -name '*.war' > out.txt => 현재 디렉토리 하위에서 이름이 '*.war'인 파일 검색 출력 결과를 out.txt에 저장
-]$ find / -name '*.war'  => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 출력
-]$ find / -name '*.war' -ls => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 ls 형식으로 출력
-]$ find . -name 'std*' -type d => 현재 디렉토리 하위에서 이름이 'std*'인 디렉토리를 찾아 출력
+]$ find / -name '*.war'           => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 출력
+]$ find / -name '*.war' -ls       => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 ls 형식으로 출력
+]$ find . -name 'std*' -type d    => 현재 디렉토리 하위에서 이름이 'std*'인 디렉토리를 찾아 출력
 ```
 #### * 파일 압축/해제
 
