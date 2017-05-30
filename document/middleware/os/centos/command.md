@@ -3,7 +3,7 @@
 목차
 
 1. [User 관리](#user-관리)
-1. [Password 관리](#password 관리)
+1. [Password 관리](#password-관리)
 1. [Group 관리](#group-관리)
 1. [파일 관리](#파일-관리)
 1. [네트워크 관련](#네트워크-관련)
