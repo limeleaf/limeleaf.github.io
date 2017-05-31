@@ -5,6 +5,8 @@
 
 #### 범주
 
+구조패턴
+
 #### 다이어그램
 
 ![ex_screenshot](./img/flyweight.jpg)
