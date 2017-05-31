@@ -7,6 +7,8 @@
 
 #### 다이어그램
 
+![ex_screenshot](./img/flyweight.jpg)
+
 #### 샘플코드
 
 #### 활용 예
