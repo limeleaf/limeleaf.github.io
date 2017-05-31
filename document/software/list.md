@@ -2,9 +2,37 @@
 
 ## 2. Design pattern
 
-- [Flyweight Pattern](/document/software/designPattern/flyweight)
-- [Strategy Pattern](/document/software/designPattern/strategy)
-- [Observer Pattern](/document/software/designPattern/observer)
+### 2.1. 생성 패턴
+
+- factory Method
+- abstraction Factory
+- singleton Pattern
+- prototype
+- builder
+
+### 2.2. 구조 패턴
+
+- adapter
+- composite
+- bridge
+- decorator
+- facade
+- [flyweight](/document/software/designPattern/flyweight)
+- proxy
+
+### 2.3. 행위 패턴
+
+- template method
+- interpreter
+- iterator
+- observer
+- strategy
+- visitor
+- chain of responsibility
+- command
+- mediator
+- state
+- memento
 
 ## 3. S/W Language
 
