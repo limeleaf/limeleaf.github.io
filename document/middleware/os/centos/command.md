@@ -44,7 +44,9 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 #### * User 생성
 
 ```text
-]$ useradd 계정명  => User 생성. CentOS 에서는 자동으로 홈 디렉토리와 쉘 환경이 설정됨
+]$ useradd 유저명  => User 생성. CentOS 에서는 자동으로 홈 디렉토리와 쉘 환경이 설정됨
+]$ useradd 유저명 -G 그룹명 => 그룹을 지정하여 생성
+]$ useradd 유저명 -u 유저ID => UID(User ID)을 지정하여 생성
 ```
 
 ### Password 관리
