@@ -153,8 +153,8 @@ exit                          => sftp 종료
 * * *
 
 ### [References]
-1. [http://webdir.tistory.com/134](http://webdir.tistory.com/134)
-1. [http://as-one.tistory.com/entry/CentOS-사용자-관리](http://as-one.tistory.com/entry/CentOS-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC)
-1. [http://zetawiki.com/wiki/리눅스_계정_생성_useradd](http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EA%B3%84%EC%A0%95_%EC%83%9D%EC%84%B1_useradd)
-1. [http://zetawiki.com/wiki/리눅스_계정_삭제_userdel](http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EA%B3%84%EC%A0%95_%EC%82%AD%EC%A0%9C_userdel)
-1. [http://welchsy.tistory.com/244](http://welchsy.tistory.com/244)
+1. <http://webdir.tistory.com/134>
+1. <http://as-one.tistory.com/entry/CentOS-사용자-관리>
+1. <http://zetawiki.com/wiki/리눅스_계정_생성_useradd>
+1. <http://zetawiki.com/wiki/리눅스_계정_삭제_userdel>
+1. <http://welchsy.tistory.com/244](http://welchsy.tistory.com/244>
