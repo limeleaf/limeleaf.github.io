@@ -15,9 +15,11 @@
 #### * User 정보 확인
 
 ```text
-]$ id -g admin  => User 기본 그룹의 gid를 출력
-]$ id -G admin  => User가 속한 모든 그룹의 gid를 출력
-]$ id -u admin  => 사용자의 uid를 출력
+]$ id           => 현재 User의 정보 확인
+]$ id admin     => 'admin' User 정보 출력. 없으면 "No such user" 출력
+]$ id -g admin  => 'admin' User의 기본 그룹의 gid 출력
+]$ id -G admin  => 'admin' User의 User가 속한 모든 그룹의 gid 출력
+]$ id -u admin  => 'admin' User의 uid 출력
 ```
 > -n : 위 옵션과 함께 사용해 숫자 대신 이름 출력
 
@@ -38,6 +40,12 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 (7) Shell: 사용자가 기본으로 사용하는 쉘 종류  
 
 * * *
+
+#### * User 생성
+
+```text
+]$ useradd 계정명  => User 생성. CentOS 에서는 자동으로 홈 디렉토리와 쉘 환경이 설정됨
+```
 
 ### Password 관리
 
@@ -62,8 +70,8 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 #### * Password 변경
 
 ```text
-]$ passwd
-]$ passwd admin
+]$ passwd         => 현재 User Password 변경
+]$ passwd admin   => "admin" 인 User Password 변경
 ```
 
 * * *
@@ -131,4 +139,5 @@ exit                          => sftp 종료
 
 ### [References]
 1. [http://webdir.tistory.com/134](http://webdir.tistory.com/134)
-1. [http://as-one.tistory.com/entry/CentOS-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC](http://as-one.tistory.com/entry/CentOS-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC)
+1. [http://as-one.tistory.com/entry/CentOS-사용자-관리](http://as-one.tistory.com/entry/CentOS-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC)
+1. [http://zetawiki.com/wiki/리눅스_계정_생성_useradd](http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EA%B3%84%EC%A0%95_%EC%83%9D%EC%84%B1_useradd)
