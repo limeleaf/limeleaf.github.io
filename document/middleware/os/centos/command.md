@@ -39,15 +39,27 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 (6) Home Directory: 사용자의 홈 디렉토리  
 (7) Shell: 사용자가 기본으로 사용하는 쉘 종류  
 
-* * *
+#### * 현재 로그인 User 확인
+
+```text
+]$ users
+```
 
 #### * User 생성
 
 ```text
-]$ useradd 유저명  => User 생성. CentOS 에서는 자동으로 홈 디렉토리와 쉘 환경이 설정됨
-]$ useradd 유저명 -G 그룹명 => 그룹을 지정하여 생성
-]$ useradd 유저명 -u 유저ID => UID(User ID)을 지정하여 생성
+]$ useradd 유저명            => User 생성. CentOS 에서는 자동으로 홈 디렉토리와 쉘 환경이 설정됨
+]$ useradd 유저명 -G 그룹명  => 그룹을 지정하여 생성
+]$ useradd 유저명 -u 유저ID  => UID(User ID)을 지정하여 생성
 ```
+#### * User 삭제
+
+```text
+]$ userdel 유저명     => 지정한 User 삭제
+]$ userdel -r 유저명  => 지정한 User 삭제(홈 디렉토리도 함께 삭제)
+```
+
+* * *
 
 ### Password 관리
 
@@ -96,18 +108,19 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 #### * 파일 검색
 
 ```text
-]$ find . -name '*.war'           => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
-]$ find . -name '*.war' > out.txt => 현재 디렉토리 하위에서 이름이 '*.war'인 파일 검색 출력 결과를 out.txt에 저장
-]$ find / -name '*.war'           => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 출력
-]$ find / -name '*.war' -ls       => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 ls 형식으로 출력
-]$ find . -name 'std*' -type d    => 현재 디렉토리 하위에서 이름이 'std*'인 디렉토리를 찾아 출력
+]$ find . -name "*.war"           => 현재 디렉토리 하위에서 이름이 '*.war'인 파일을 찾아 출력
+]$ find . -name "*.war" > out.txt => 현재 디렉토리 하위에서 이름이 '*.war'인 파일 검색 출력 결과를 out.txt에 저장
+]$ find / -name "*.war"           => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 출력
+]$ find / -name "*.war" -ls       => 전체 디렉토리에서 이름이 '*.war'인 파일을 찾아 ls 형식으로 출력
+]$ find . -name "std*" -type d    => 현재 디렉토리 하위에서 이름이 'std*'인 디렉토리를 찾아 출력
 ```
 #### * 파일 압축/해제
 
 ```text
 ]$ tar -cvzf aa.tar.gz dirA dirB  => 디렉토리 A와 B를 aa.tar.gz로 압축
-]$ tar -xvf abc.tar       => tar 압축 해제
-]$ tar -xzvf abc.tar.gz   => tar.gz 압축 해제
+]$ tar -xvf abc.tar               => tar 압축 해제
+]$ tar -xzvf abc.tar.gz           => tar.gz 압축 해제
+]$ unzip -xzvf abc.tar.gz         => zip 압축 해제
 ```
 
 #### * 파일 이동
@@ -143,3 +156,5 @@ exit                          => sftp 종료
 1. [http://webdir.tistory.com/134](http://webdir.tistory.com/134)
 1. [http://as-one.tistory.com/entry/CentOS-사용자-관리](http://as-one.tistory.com/entry/CentOS-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC)
 1. [http://zetawiki.com/wiki/리눅스_계정_생성_useradd](http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EA%B3%84%EC%A0%95_%EC%83%9D%EC%84%B1_useradd)
+1. [http://zetawiki.com/wiki/리눅스_계정_삭제_userdel](http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EA%B3%84%EC%A0%95_%EC%82%AD%EC%A0%9C_userdel)
+1. [http://welchsy.tistory.com/244](http://welchsy.tistory.com/244)
