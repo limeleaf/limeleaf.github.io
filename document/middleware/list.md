@@ -9,6 +9,8 @@
 
 ### 2.2. Httpd
 
+### 2.3. Maria DB
+
 ## 3. Framework
 
 ### 3.1. Spring Batch
