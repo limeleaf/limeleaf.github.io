@@ -133,14 +133,6 @@ Root : $1$Fz4q1GjE$G/EskZPyPdMo9.cNhRKSY.:14806: 0 : 99999 : 7 :      :      :
 
 ### 네트워크 관련
 
-#### * Port 확인
-```text
-]$ netstate -ant | grep LISTEN | grep 80  => LISTEN 하고있는 80포트
-]$ netstate -ant | grep 80                => 80포트의 연결상태
-]$ netstate -ant | grep LISTEN            => LISTEN 하고 있는 모든 포트
-]$ netstate -ant | grep LISTEN            => LISTEN 하고 있는 모든 포트
-```
-
 #### * SFTP 연결
 ```text
 ]$ sftp root@123.456.7.8      => sftp로 다른 Server에 접속 

@@ -1,7 +1,8 @@
 ## 1. OS
 
 ### 1.1. CentOS
-- [Command](/document/middleware/os/centos/command)
+- [Command_01](/document/middleware/os/centos/command_01)
+- [Command_02](/document/middleware/os/centos/command_02)
 
 ## 2. Middleware
 
@@ -18,5 +19,3 @@
 ## 4. Solution
 
 ### 4.1 Scouter
-
-
