@@ -18,7 +18,7 @@
 ```
 
 > -r, --route              display routing table  
--I, --interfaces=< Iface >   display interface table for < Iface >  
+-I, --interfaces=< Iface >   display interface table for < Iface >   
 -i, --interfaces           display interface table  
 -g, --groups               display multicast group memberships  
 -s, --statistics           display networking statistics (like SNMP)  
