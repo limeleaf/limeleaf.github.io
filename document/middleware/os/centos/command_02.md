@@ -72,7 +72,7 @@ List of possible address families (which support routing):
 
 ```text
 ]$ netstat -anp | grep :80                               => 80포트의 연결 상태
-]$ netstat -anp | grep ESTABLISHED | grep :80 | wc -l    => 80포트에 ESTABLISHED인 연결 개수
+]$ netstat -anp | grep ESTABLISHED | grep :80 | wc -l    => 80포트에 ESTABLISHED된 연결 개수
 ]$ netstat -anp | grep ESTABLISHED                       => ESTABLISHED인 모든 연결
 ]$ netstat -anptu                                        => 모든 TCP, UDP 연결
 ]$ netstat -lnptu                                        => LISTEN 하고 있는 모든 TCP, UDP 연결
