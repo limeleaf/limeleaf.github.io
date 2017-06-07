@@ -66,6 +66,7 @@ List of possible address families (which support routing):
 ]$ netstat -p     => PID와 프로그램명을 표시
 ]$ netstat -a     => 모든 Socket(LISTEN 등)
 ]$ netstat -l     => 모든 LISTENING Server Socket 표시
+]$ netstat -o     => 연결 대기 시간 표기
 ```
 
 #### * 활용
