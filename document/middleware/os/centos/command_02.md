@@ -50,13 +50,32 @@ List of possible address families (which support routing):
   netrom (AMPR NET/ROM) ipx (Novell IPX) ddp (Appletalk DDP)  
   x25 (CCITT X.25)  
 
-#### * Port 확인
+#### * Protocol별 정보
+  
+```text
+]$ netstat -t  => TCP 연결
+]$ netstat -u  => UDP 연결
+]$ netstat -s  => Protocol 별 통계
+```
+
+#### * 주요 기능
+  
+```text
+]$ netstat -c 3   => 3초 간격으로 netstat 수행
+]$ netstat -n     => IP와 Port를 호스트명과 포트명 대신 번호로 표시
+]$ netstat -p     => PID와 프로그램명을 표시
+]$ netstat -a     => 모든 Socket(LISTEN 등)
+]$ netstat -l     => 모든 LISTENING Server Socket 표시
+```
+
+#### * 활용
 
 ```text
-]$ netstate -ant | grep LISTEN | grep 80  => LISTEN 하고있는 80포트
-]$ netstate -ant | grep 80                => 80포트의 연결상태
-]$ netstate -ant | grep LISTEN            => LISTEN 하고 있는 모든 포트
-]$ netstate -ant | grep LISTEN            => LISTEN 하고 있는 모든 포트
+]$ netstat -anpt | grep :80                              => 80포트의 연결 상태
+]$ netstat -anpt | grep LISTEN                           => LISTEN 하고 있는 모든 TCP 연결
+]$ netstat -anp | grep ESTABLISHED | grep :80 | wc -l    => 80포트에 ESTABLISHED된 연결 개수
+]$ netstat -anptu                                        => 모든 TCP, UDP 연결
+]$ netstat -lnptu                                        => LISTEN 하고 있는 모든 TCP, UDP 연결
 ```
 
 * * *
