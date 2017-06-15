@@ -14,8 +14,8 @@
 
 #### * User 정보 확인
 
-```text
-]$ id           => 현재 User의 정보 확인
+```bash
+]$ id           ## 현재 User의 정보 확인
 ]$ id admin     => 'admin' User 정보 출력. 없으면 "No such user" 출력
 ]$ id -g admin  => 'admin' User의 기본 그룹의 gid 출력
 ]$ id -G admin  => 'admin' User의 User가 속한 모든 그룹의 gid 출력
