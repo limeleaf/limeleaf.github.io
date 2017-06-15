@@ -12,10 +12,6 @@
 
 ### 2.3. Maria DB
 
-## 3. Framework
+## 3. Solution
 
-### 3.1. Spring Batch
-
-## 4. Solution
-
-### 4.1 Scouter
+### 3.1 Scouter
