@@ -71,7 +71,7 @@ public class Example {
 ```
 
 
-* * * 
+* * *
 
 ### STS를 이용하여 시작하기
 
