@@ -50,4 +50,4 @@
 ### 4.1. Spring Batch
 
 ### 4.2. Spring Boot
-- [Getting Started](/document/software/framework/spring/boot/getting-started)
+- [Getting Started](/document/software/framework/spring-boot/getting-started)
