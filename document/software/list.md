@@ -39,7 +39,7 @@
 ### 3.1. Java
 
 - BCI
-- [Collection](/document/software/java/collection.md)
+- [Collection](/document/software/java/collection)
 
 ### 3.2. RxJava
 
@@ -50,4 +50,4 @@
 ### 4.1. Spring Batch
 
 ### 4.2. Spring Boot
-- [Getting Started](/document/software/framework/spring/boot/getting-started.md)
+- [Getting Started](/document/software/framework/spring/boot/getting-started)
