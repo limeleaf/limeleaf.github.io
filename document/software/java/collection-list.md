@@ -7,7 +7,7 @@
 
 * * *
 
-#### ArrayList
+### ArrayList
 
 ```
 java.util
@@ -25,7 +25,7 @@ Direct Known Subclasses:
   AttributeList, RoleList, RoleUnresolvedList
 ```
 
-##### 1. 정의 및 주요 특징
+#### 1. 정의 및 주요 특징
 
 List 인터페이스 구현체. array가 사용됨.
 
@@ -41,9 +41,9 @@ transient Object[] elementData;  // Data들이 담기는 곳
 - add 연산은 amortized constant time 내 실행. (n 요소를 추가하려면 O(n) 시간이 필요)
 - 다른 모든 작업은 linear time 내 실행됨
 
-##### 2. add 메소드
+#### 2. add 메소드
 
-###### 2.1. add 메커니즘 01
+##### 2.1. add 메커니즘 01
 
 ArrayList 인스턴스는 용량(capacity, list로 엘리먼트를 저장하는데 사용되는 배열의 크기)을 가짐. 항상 최소한 list의 크기만큼이며, 엘리먼트가 ArrayList에 추가되면 용량이 자동으로 커짐.
 
@@ -87,7 +87,7 @@ private void grow(int minCapacity) {
 
 응용 프로그램은 ensureCapacity 작업을 사용하여 많은 수의 엘리먼트를 추가하기 전에 ArrayList 인스턴스의 용량을 미리 늘릴 수 있음. 이로 인해 용량 확보를 위한 재 할당 빈도를 줄일 수 있음.
 
-###### 2.2. add 메커니즘 02(index를 지정)
+##### 2.2. add 메커니즘 02(index를 지정)
 
 아래와 같이 특정 위치에 엘리먼트를 삽입하거나 삭제하는 경우, 해당 위치 이후에 엘리먼트 배열을 shift를 위해 arraycopy가 이루어 짐. 이처럼 삽입, 삭제시 오버헤드가 발생함.
 
@@ -118,7 +118,7 @@ public E remove(int index) {
 }
 ```
 
-##### 3. ArrayList의 동기화 방법
+#### 3. ArrayList의 동기화 방법
 
 ArrayList는 동기화되지 않으므로 엘리먼트 추가, 삭제에 대한 동기화가 필요.
 
@@ -126,14 +126,13 @@ ArrayList는 동기화되지 않으므로 엘리먼트 추가, 삭제에 대한 
 List list = Collections.synchronizedList(new ArrayList(...));
 ```
 
-##### 4. fail-fast
+#### 4. fail-fast
 
 이 클래스의 iterator 메소드와 listIterator 메소드가 return하는 iterator는 fail-fast임. 만약 iterator가 생성되어 처리되고 있는 도중에 리스트가 구조적으로 변경되면, iterator 자신의 remove 메소드 또는 add 메소드 이외는 ConcurrentModificationException를 Throw 함. 따라서 동시 수정이 이루어지면 빠르고 신속하게 실패함.
 
 ***
 
-#### LinkedList
-
+### LinkedList
 
 ***
 
