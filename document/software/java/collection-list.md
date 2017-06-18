@@ -83,7 +83,7 @@ private void grow(int minCapacity) {
 }
 ```
 
-> 아래와 같이 특정 위치에 엘리먼트를 삽입하거나 삭제하는 경우, 해당 위치 이후에 엘리먼트 배열을 shift를 위해 arraycopy가 이루어 짐(오버헤드 발생).
+> 아래와 같이 특정 위치에 엘리먼트를 삽입하거나 삭제하는 경우, 해당 위치 이후의 엘리먼트 배열을 shift하기 위해 arraycopy가 이루어 짐(오버헤드 발생).
 
 ```java
 public void add(int index, E element) {
