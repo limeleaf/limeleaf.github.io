@@ -39,7 +39,7 @@
 ### 3.1. Java
 
 - BCI
-- [Collection](/document/software/java/collection)
+- [Collection(LIST)](/document/software/java/collection-list)
 
 ### 3.2. RxJava
 
