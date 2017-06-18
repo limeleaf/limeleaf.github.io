@@ -41,11 +41,9 @@ transient Object[] elementData;  // Data들이 담기는 곳
 - add 연산은 amortized constant time 내 실행. (n 요소를 추가하려면 O(n) 시간이 필요)
 - 다른 모든 작업은 linear time 내 실행됨
 
-#### 2. add 메소드
+#### 2. add 메커니즘
 
-##### 2.1. add 메커니즘 01
-
-ArrayList 인스턴스는 용량(capacity, list로 엘리먼트를 저장하는데 사용되는 배열의 크기)을 가짐. 항상 최소한 list의 크기만큼이며, 엘리먼트가 ArrayList에 추가되면 용량이 자동으로 커짐.
+ArrayList 인스턴스는 용량(capacity, list로 엘리먼트를 저장하는데 사용되는 배열의 크기)을 가짐. 항상 최소한 list의 크기만큼이며, 엘리먼트가 ArrayList에 추가되면 용량이 자동으로 커짐. 응용 프로그램은 ensureCapacity 작업을 사용하여 많은 수의 엘리먼트를 추가하기 전에 ArrayList 인스턴스의 용량을 미리 늘릴 수 있음. 이로 인해 용량 확보를 위한 재 할당 빈도를 줄일 수 있음.
 
 > add 메소드 내부에서는 아래와 같은 관련 메소드들이 서로 호출됨. 아래 로직에서 볼 수 있듯이, add할 때 마다 배열을 늘리는 것이 아님. 일정 개수만큼의 용량을 확보하여 add 작업을 수행하고, 이 용량보다 더 많은 엘리먼트가 add 되면 또 다시 일정 개수만큼 용량을 다시 확보함.
 
@@ -85,11 +83,7 @@ private void grow(int minCapacity) {
 }
 ```
 
-응용 프로그램은 ensureCapacity 작업을 사용하여 많은 수의 엘리먼트를 추가하기 전에 ArrayList 인스턴스의 용량을 미리 늘릴 수 있음. 이로 인해 용량 확보를 위한 재 할당 빈도를 줄일 수 있음.
-
-##### 2.2. add 메커니즘 02(index를 지정)
-
-아래와 같이 특정 위치에 엘리먼트를 삽입하거나 삭제하는 경우, 해당 위치 이후에 엘리먼트 배열을 shift를 위해 arraycopy가 이루어 짐. 이처럼 삽입, 삭제시 오버헤드가 발생함.
+> 아래와 같이 특정 위치에 엘리먼트를 삽입하거나 삭제하는 경우, 해당 위치 이후에 엘리먼트 배열을 shift를 위해 arraycopy가 이루어 짐. 이처럼 삽입, 삭제시 오버헤드가 발생함.
 
 ```java
 public void add(int index, E element) {
