@@ -149,8 +149,6 @@ ulimit -n 2048   # 최대 open files 개수 수정
    ...
 ```
 
-####
-
 #### * 전체 옵션
 
 -a All current limits are reported  
