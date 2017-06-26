@@ -179,4 +179,4 @@ ulimit -n 2048   # 최대 open files 개수 수정
 ### [References]
 
 1. CentOS 6 man pages
-1. <https://www.ibm.com/support/knowledgecenter/ko/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/user/ulimits.html>
+1. [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/ko/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/user/ulimits.html)
