@@ -20,9 +20,6 @@ java.lang.Object
 
 All Implemented Interfaces:
   Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess
-
-Direct Known Subclasses:
-  AttributeList, RoleList, RoleUnresolvedList
 ```
 
 #### 1. 정의 및 주요 특징
@@ -43,9 +40,9 @@ transient Object[] elementData;  // Data들이 담기는 곳
 
 #### 2. add 메커니즘
 
-ArrayList 인스턴스는 용량(capacity, list로 엘리먼트를 저장하는데 사용되는 배열의 크기)을 가짐. 항상 최소한 list의 크기만큼이며, 엘리먼트가 ArrayList에 추가되면 용량이 자동으로 커짐. 응용 프로그램은 ensureCapacity 작업을 사용하여 많은 수의 엘리먼트를 추가하기 전에 ArrayList 인스턴스의 용량을 미리 늘릴 수 있음. 이로 인해 용량 확보를 위한 재 할당 빈도를 줄일 수 있음.
+ArrayList 인스턴스는 capacity(Element를 저장하는데 사용될 배열의 size)만큼의 배열을 가짐. Element가 capacity를 초과하게 되는 경우, 자동으로 늘림. 응용 프로그램은 많은 수의 엘리먼트를 추가하기 전에 ensureCapacity 작업을 통해 ArrayList 인스턴스의 용량을 미리 늘릴 수 있음.
 
-> add 메소드 내부에서는 아래와 같은 관련 메소드들이 서로 호출됨. 아래 로직에서 볼 수 있듯이, add할 때 마다 배열을 늘리는 것이 아님. 일정 개수만큼의 용량을 확보하여 add 작업을 수행하고, 이 용량보다 더 많은 엘리먼트가 add 되면 또 다시 일정 개수만큼 용량을 다시 확보함.
+> add 메소드 내부에서 아래와 같은 관련 메소드들이 서로 사용됨. 아래 로직에서 볼 수 있듯이, 일정 용량을 미리 준비하여 add 작업을 수행하고 이 용량보다 더 많은 엘리먼트가 add 되면 용량을 다시 확보함.
 
 ```java
 public boolean add(E e) {
@@ -58,14 +55,11 @@ private void ensureCapacityInternal(int minCapacity) {
     if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
         minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
     }
-
     ensureExplicitCapacity(minCapacity);
 }
 
 private void ensureExplicitCapacity(int minCapacity) {
     modCount++;
-
-    // overflow-conscious code
     if (minCapacity - elementData.length > 0)
         grow(minCapacity);
 }
