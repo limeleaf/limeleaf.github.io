@@ -4,6 +4,7 @@
 
 1. [netstat](#netstat)
 1. [ulimit](#ulimit)
+
 * * *
 
 ### netstat
@@ -63,7 +64,6 @@
 -C, --cache                display routing cache instead of FIB  
 -T, --notrim               stop trimming long addresses  
 -Z, --context              display SELinux security context for sockets  
-
 
 * * *
 
@@ -133,10 +133,12 @@ limits.conf에 설정
 # 아래 내용 추가
 user1           soft    nproc          4096
 user1           hard    nproc          4096
+user1           soft    nofile         4096
+user1           hard    nofile         4096
  ...
 ```
 
-/etc/profile 수정(수정 후 해당 Shell의 사용자가 재접근 하면 적용됨)
+/etc/profile 수정(수정 후 해당 Shell의 사용자가 재접속하면 변경이 적용된 환경 사용 가능)
 
 ```bash
 ]$ cd ~
@@ -146,7 +148,6 @@ ulimit -u 8192   # 최대 Process 개수 수정
 ulimit -n 2048   # 최대 open files 개수 수정
    ...
 ```
-
 
 ####
 
