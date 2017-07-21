@@ -38,8 +38,15 @@
 
 ### 3.1. Java
 
-- BCI
-- [Collection(LIST)](/document/software/java/collection-list)
+#### 3.1.1 BCI
+
+#### 3.1.2 Collection
+- [List](/document/software/java/collection-list)
+
+#### 3.1.3 Sorting
+- Array Sort
+- [List Sort](/document/software/java/collection-list-sort)
+- [Map Sort](/document/software/java/collection-map-sort)
 
 ### 3.2. RxJava
 
