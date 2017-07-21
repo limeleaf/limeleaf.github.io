@@ -53,6 +53,8 @@ Collections.sort(list, new Comparator<Person>() {
 });
 ```
 
+***
+
 ### Comparable 사용
 
 ```
