@@ -2,11 +2,11 @@
 
 목차
 
-1. [TreeMap을 사용](#treeMap을사용)
+1. [TreeMap 사용](#treeMap-사용)
 
 * * *
 
-### TreeMap을 사용
+### TreeMap 사용
 
 ```
 java.util
