@@ -2,8 +2,8 @@
 
 목차
 
-1. [Comparator 사용](#comparator사용)
-1. [Comparable 사용](#comparable사용)
+1. [Comparator 사용](#comparator-사용)
+1. [Comparable 사용](#comparable-사용)
 
 * * *
 
