@@ -38,18 +38,18 @@ list.add(new Person("홍길동", 25));
 list.add(new Person("최길동", 5));
 
 Collections.sort(list, new Comparator<Person>() {
-	// 현재 객체가 앞, 비교할 객체가 뒤
-	@Override
-	public int compare(Person o1, Person o2) {
-    int order = 1;	// 오름차순, 내림차순일 경우 -1로 하면 됨
-		int result = o1.getName().compareTo(o2.getName());
-
-		// 순번이 같을 때, 두 번째 정렬 조건을 아래와 같이 사용할 수 있음
-		if(result == 0) {
-			result = o1.getId() - o2.getId();
-		}
-		return result * order;
-	}
+    // 현재 객체가 앞, 비교할 객체가 뒤
+    @Override
+    public int compare(Person o1, Person o2) {
+        int order = 1;	// 오름차순, 내림차순일 경우 -1로 하면 됨
+        int result = o1.getName().compareTo(o2.getName());
+        
+        // 순번이 같을 때, 두 번째 정렬 조건을 아래와 같이 사용할 수 있음
+        if(result == 0) {
+            result = o1.getId() - o2.getId();
+        }
+        return result * order;
+    }
 });
 ```
 
@@ -82,28 +82,28 @@ public interface Comparable<T> {
 
 ```java
 public class PersonComparable implements Comparable<PersonComparable>{
-	String name;
-	int id;
+    String name;
+    int id;
 
-	public PersonComparable(String name, int id) {
-		this.name = name;
-		this.id = id;
-	}
-  // 중략
+    public PersonComparable(String name, int id) {
+        this.name = name;
+	this.id = id;
+    }
+    // 중략
 
-  @Override
-	public int compareTo(PersonComparable o) {
-		int order = 1;  // 오름차순, 내림차순일 경우 -1로 하면 됨
-		int result;
+    @Override
+    public int compareTo(PersonComparable o) {
+        int order = 1;  // 오름차순, 내림차순일 경우 -1로 하면 됨
+	int result;
 
-		result = this.name.compareTo(o.getName());
-    // 순번이 같을 때, 두 번째 정렬 조건을 아래와 같이 사용할 수 있음
-		if(result == 0) {
-			result = this.id - o.getId();
-		}
+        result = this.name.compareTo(o.getName());
+        // 순번이 같을 때, 두 번째 정렬 조건을 아래와 같이 사용할 수 있음
+        if(result == 0) {
+            result = this.id - o.getId();
+        }
 
-		return result * order;
-	}
+        return result * order;
+    }
 }
 ```
 
