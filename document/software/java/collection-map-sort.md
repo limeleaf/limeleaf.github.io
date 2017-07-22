@@ -29,10 +29,12 @@ All Implemented Interfaces:
 A **Red-Black tree** based NavigableMap implementation. The map is sorted according to **the natural ordering of its keys**, or by **a Comparator provided at map creation time**, depending on which constructor is used.
 This implementation provides guaranteed **log(n) time cost for the containsKey, get, put and remove** operations.
 
-#### 2. HashMap을 TreeMap으로 Sorting하는 예
-데이터를 put 메소드를 통해 저장하면, 자동으로 소팅되어 보관됨.
+#### 2. TreeMap으로 Sorting하는 예
+
+데이터를 put 메소드를 통해 저장하면, "key" 기준으로 소팅된 상태로 저장됨.
 
 ```java
+// Case 1)
 TreeMap<String, String> treeMap = new TreeMap<String, String>();
 treeMap.put("key2", "value2");
 treeMap.put("key1", "value1");
@@ -43,6 +45,7 @@ treeMap.put("key1", "value1");
 ```java
 Map<String, String> hashMap = creatTestData(); // 임의의 데이터 생성
 
+// Case 2)
 TreeMap<String, String> treeMap1 = new TreeMap<String, String>();
 treeMap1.putAll(hashMap);
 ```
@@ -52,6 +55,7 @@ treeMap1.putAll(hashMap);
 ```java
 Map<String, String> hashMap = creatTestData(); // 임의의 데이터 생성
 
+// Case 3)
 TreeMap<String, String> treeMap1 = new TreeMap<String, String>(Collections.reverseOrder());
 treeMap1.putAll(hashMap);
 ```
