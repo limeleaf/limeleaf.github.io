@@ -8,7 +8,7 @@
 
 ### TreeSet 사용
 
-```
+```java
 java.util
 Class TreeSet<E>
 
