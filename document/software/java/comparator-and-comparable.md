@@ -2,8 +2,8 @@
 
 목차
 
-1. [Comparator 사용](#comparator-사용)
-1. [Comparable 사용](#comparable-사용)
+1. [Comparator](#comparator-사용)
+1. [Comparable](#comparable-사용)
 
 * * *
 
@@ -43,7 +43,7 @@ Collections.sort(list, new Comparator<Person>() {
     public int compare(Person o1, Person o2) {
         int order = 1;	// 오름차순, 내림차순일 경우 -1로 하면 됨
         int result = o1.getName().compareTo(o2.getName());
-        
+
         // 순번이 같을 때, 두 번째 정렬 조건을 아래와 같이 사용할 수 있음
         if(result == 0) {
             result = o1.getId() - o2.getId();

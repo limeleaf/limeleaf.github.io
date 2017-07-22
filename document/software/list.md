@@ -45,6 +45,7 @@
 
 #### 3.1.3 Sorting
 - Array Sort
+- [Comparator And Comparable](/document/software/java/comparator-and-comparable)
 - [List Sort](/document/software/java/collection-list-sort)
 - [Map Sort](/document/software/java/collection-map-sort)
 
