@@ -44,10 +44,11 @@
 - [List](/document/software/java/collection-list)
 
 #### 3.1.3 Sorting
-- Array Sort
 - [Comparator And Comparable](/document/software/java/comparator-and-comparable)
+- [Array Sort](/document/software/java/array-sort)
 - [List Sort](/document/software/java/collection-list-sort)
 - [Map Sort](/document/software/java/collection-map-sort)
+- [Set Sort](/document/software/java/collection-set-sort)
 
 ### 3.2. RxJava
 
