@@ -1,4 +1,4 @@
-## List Sort
+## Comparator and Comparable
 
 목차
 
