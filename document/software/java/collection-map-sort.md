@@ -2,7 +2,7 @@
 
 목차
 
-1. [TreeMap 사용](#treeMap-사용)
+1. [TreeMap 사용](#treemap-사용)
 
 * * *
 
@@ -31,6 +31,7 @@ This implementation provides guaranteed **log(n) time cost for the containsKey, 
 
 #### 2. TreeMap으로 Sorting하는 예
 
+CASE 1)  
 데이터를 put 메소드를 통해 저장하면, "key" 기준으로 소팅된 상태로 저장됨.
 
 ```java
@@ -39,7 +40,7 @@ TreeMap<String, String> treeMap = new TreeMap<String, String>();
 treeMap.put("key2", "value2");
 treeMap.put("key1", "value1");
 ```
-
+CASE 2)  
 아래처럼 HashMap을 TreeMap을 이용하여 Sorting할 경우, TreeMap의 putAll() 메소드에서는 내부적으로 HashMap의 "key, value" 데이터를 꺼낸 후 "key"를 기준으로 정렬("key"에 해당하는 객체의 compareTo() 메소드를 이용)되도록 Tree 형태로 모두 옮겨 담는 작업을 수행함.  
 
 ```java
@@ -50,6 +51,7 @@ TreeMap<String, String> treeMap1 = new TreeMap<String, String>();
 treeMap1.putAll(hashMap);
 ```
 
+CASE 3)  
 내림차순으로 Sorting하는 예는 아래와 같음.
 
 ```java
