@@ -2,7 +2,7 @@
 
 목차
 
-1. [Collections의 sort메소드와 Comparable](#collections의-sort메소드와-comparator)
+1. [Collections의 sort메소드와 Comparable](#collections의-sort메소드와-comparable)
 1. [Collections의 sort메소드와 Comparator](#collections의-sort메소드와-comparator)
 
 * * *
