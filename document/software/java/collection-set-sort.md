@@ -2,7 +2,7 @@
 
 목차
 
-1. [TreeSet 사용](#treeSet-사용)
+1. [TreeSet 사용](#treeset-사용)
 
 * * *
 
@@ -24,12 +24,12 @@ All Implemented Interfaces:
  Serializable, Cloneable, Iterable<E>, Collection<E>, NavigableSet<E>, Set<E>, SortedSet<E>
 ```
 
-#### 1. Tree Map 정의 및 주요 특징
+#### 1. TreeSet 정의 및 주요 특징
 
 A NavigableSet implementation based on a TreeMap. The elements are ordered using their natural ordering, or by a Comparator provided at set creation time, depending on which constructor is used.
 This implementation provides guaranteed log(n) time cost for the basic operations (add, remove and contains).
 
-#### 2. TreeMap으로 Sorting하는 예
+#### 2. TreeSet으로 Sorting하는 예
 
 작업중..
 
