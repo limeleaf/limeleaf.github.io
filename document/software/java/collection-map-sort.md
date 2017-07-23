@@ -24,7 +24,7 @@ All Implemented Interfaces:
   Serializable, Cloneable, Map<K,V>, NavigableMap<K,V>, SortedMap<K,V>
 ```
 
-#### 1. Tree Map 정의 및 주요 특징
+#### 1. TreeMap 정의 및 주요 특징
 
 A **Red-Black tree** based NavigableMap implementation. The map is sorted according to **the natural ordering of its keys**, or by **a Comparator provided at map creation time**, depending on which constructor is used.
 This implementation provides guaranteed **log(n) time cost for the containsKey, get, put and remove** operations.
