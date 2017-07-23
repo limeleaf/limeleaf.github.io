@@ -2,12 +2,12 @@
 
 목차
 
-1. [Collections.sort & Comparable](#collections-sort-&-comparable)
-1. [Collections.sort & Comparator](#collections-sort-&-comparator)
+1. [Collections.sort와 Comparable](#collections.sort와-comparable)
+1. [Collections.sort와 Comparator](#collections.sort와-comparator)
 
 * * *
 
-### Collections Sort & Comparable
+### Collections.sort와 Comparable
 
 #### 1. 정의 및 주요 특징
 
