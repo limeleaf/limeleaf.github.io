@@ -2,12 +2,12 @@
 
 목차
 
-1. [Collections.sort와 Comparable](#collections.sort와-comparable)
-1. [Collections.sort와 Comparator](#collections.sort와-comparator)
+1. [Collections의 sort메소드와 Comparable](#collections의-sort메소드와-comparator)
+1. [Collections의 sort메소드와 Comparator](#collections의-sort메소드와-comparator)
 
 * * *
 
-### Collections.sort와 Comparable
+### Collections의 sort메소드와 Comparable
 
 #### 1. 정의 및 주요 특징
 
@@ -30,7 +30,7 @@ Collections.sort(list1);
 
 ***
 
-### Collections Sort & Comparator
+### Collections의 sort메소드와 Comparator
 
 #### 1. 정의 및 주요 특징
 
