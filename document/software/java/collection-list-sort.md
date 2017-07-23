@@ -2,12 +2,12 @@
 
 목차
 
-1. [Collections Sort + Comparable](#collections_sort_+_comparable)
-1. [Collections Sort + Comparator](#collections_sort_+_comparator)
+1. [Collections Sort + Comparable](#collections-sort-&-comparable)
+1. [Collections Sort + Comparator](#collections-sort-&-comparator)
 
 * * *
 
-### Collections Sort + Comparable
+### Collections Sort & Comparable
 
 #### 1. 정의 및 주요 특징
 
@@ -30,7 +30,7 @@ Collections.sort(list1);
 
 ***
 
-### Collections Sort + Comparator
+### Collections Sort & Comparator
 
 #### 1. 정의 및 주요 특징
 
