@@ -2,8 +2,8 @@
 
 목차
 
-1. [Collections Sort + Comparable](#collections-sort-&-comparable)
-1. [Collections Sort + Comparator](#collections-sort-&-comparator)
+1. [Collections.sort & Comparable](#collections-sort-&-comparable)
+1. [Collections.sort & Comparator](#collections-sort-&-comparator)
 
 * * *
 
