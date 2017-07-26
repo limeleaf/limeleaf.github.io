@@ -50,6 +50,9 @@
 - [Map Sort](/document/software/java/collection-map-sort)
 - [Set Sort](/document/software/java/collection-set-sort)
 
+#### 3.1.4 Pattern Matching
+- [Pattern and Matcher](/document/software/java/pattern-and-matcher)
+
 ### 3.2. RxJava
 
 ### 3.3. Python
