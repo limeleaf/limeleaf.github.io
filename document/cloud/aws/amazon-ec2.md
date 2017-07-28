@@ -5,10 +5,11 @@
 1. [Amazon EC2 관련 자료](#amazon-ec2-관련-자료)
 1. [관련 서비스](#관련-서비스)
 1. [과금](#과금)
+1. [FAQ](#faq)
 
 * * *
 
-### Amazon EC2 란?
+### 정의 및 특징
 
 - [Amazon EC2 사용 설명서(공식, 외부)](http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html)
 
