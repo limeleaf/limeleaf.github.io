@@ -4,7 +4,7 @@
 
 #### 1.1.1 컴퓨팅
 
-- Amazon EC2
+- [Amazon EC2](/document/cloud/aws/amazon-ec2)
 - Amazon EC2 Container Registry
 - Amazon EC2 Container Service
 - Auto Scaling
