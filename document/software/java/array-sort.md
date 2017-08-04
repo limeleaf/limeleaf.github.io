@@ -24,6 +24,8 @@ Sorts the specified list into **ascending order(오름차순)**, according to **
 int[] intArray = new int[] { 1, 3, 5, 2, 4, 7 };
 // 오름차순으로 정렬
 Arrays.sort(intArray);
+// 내림차순으로 정렬
+Arrays.sort(a, Collections.reverseOrder());
 ```
 
 ***

@@ -42,6 +42,7 @@
 
 #### 3.1.2 Collection
 - [List](/document/software/java/collection-list)
+- [Collections](/document/software/java/collections)
 
 #### 3.1.3 Sorting
 - [Comparator And Comparable](/document/software/java/comparator-and-comparable)
