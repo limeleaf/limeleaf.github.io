@@ -4,6 +4,7 @@
 
 1. [Collections](#collections-클래스)
 1. [Collections.rotate](#rotate-메소드)
+1. [Collections.reverse](#reverse-메소드)
 
 * * *
 
@@ -64,17 +65,47 @@ list.add(3);
 list.add(4);
 list.add(5);
 
-System.out.println("* 원본 *");
+// 원본
 printListVal();
 
-System.out.println("* 오른쪽으로 3만큼 rotation *");
+// 오른쪽으로 3만큼 rotation
 Collections.rotate(list, 3);
 printListVal();
 
-System.out.println("* 왼쪽으로 2만큼 rotation *");
+// 왼쪽으로 2만큼 rotation
 Collections.rotate(list, -2);
 printListVal();
+
+// list 중 1~4에 해당하는 Sub list만 오른쪽으로 1만큼 rotate
+Collections.rotate(list.subList(1, 4), 1);
+printListVal();
 ```
+
+* * *
+
+### reverse 메소드
+
+#### 1. 정의 및 주요 특징
+
+```java
+public static void reverse(List<?> list)
+```
+
+**Reverses the order** of the elements in the specified list. This method runs in linear time.
+
+#### 2. 사용 예
+
+```java
+// Reverse
+Collections.reverse(list);
+printListVal();
+
+// list 중 1~4에 해당하는 Sub list만 역순으로 배열
+Collections.reverse(list.subList(1, 4));
+printListVal();
+```
+
+* * *
 
 ### [References]
 1. <https://docs.oracle.com/javase/7/docs/api/>
