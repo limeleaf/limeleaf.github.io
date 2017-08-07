@@ -444,4 +444,4 @@ this is a test
 * * *
 
 ### [References]
-1. <http://www.oracle.com/technetwork/articles/java/javareflection-1536171.html>
+1. [Oracle Tech Articles](http://www.oracle.com/technetwork/articles/java/javareflection-1536171.html)
