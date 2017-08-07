@@ -331,7 +331,7 @@ public class InvokeMethodTest {
 84
 ```
 
-#### 2.6. 생자를 Invoke하여 객체 생성하기
+#### 2.6. 생성자를 Invoke하여 객체 생성하기
 
 생성자를 invoke 함으로써 새 객체를 생성할 수 있음
 
