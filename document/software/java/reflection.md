@@ -42,7 +42,7 @@ System.out.println(m[0].toString());
 
 #### 1.2. 실행 예
 
-- 실행 코드
+[실행 코드]
 ```Java
 public class DumpMethods {
    public static void main(String args[])
@@ -60,7 +60,7 @@ public class DumpMethods {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```java
 public synchronized java.lang.Object java.util.Stack.pop()
 public java.lang.Object java.util.Stack.push(java.lang.Object)
@@ -77,7 +77,7 @@ public synchronized int java.util.Stack.search(java.lang.Object)
 
 Class.isInstance 메소드를 이용하면 인수로 전달받은 객체가 자신 클래스의 Instance인지 확인 가능
 
-- 실행 코드
+[실행 코드]
 ```java
 public class InstanceOfTest {
 	public static void main(String args[]) {
@@ -98,7 +98,7 @@ public class InstanceOfTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 false
 true
@@ -108,6 +108,7 @@ true
 
 아래와 같이, 클래스 내에서 정의된 메소드를 찾을 수 있음
 
+[실행 코드]
 ```java
 public class FindMethodTest {
 
@@ -154,7 +155,7 @@ public class FindMethodTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 name        = main
 decl class  = class test.FindMethodTest
@@ -174,7 +175,7 @@ return type = int
 
 메소드를 찾는 방식과 유사하게, 아래와 같이 실행
 
-- 실행 코드
+[실행 코드]
 ```java
 public class ObtainConstructorInfoTest {
 
@@ -216,7 +217,7 @@ public class ObtainConstructorInfoTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 name       = test.ObtainConstructorInfoTest
 decl class = class test.ObtainConstructorInfoTest
@@ -232,7 +233,7 @@ param #1   = double
 
 클래스에 정의된 필드를 찾으려면 아래와 같이 처리
 
-- 실행 코드
+[실행 코드]
 ```java
 public class FindFieldTest {
 
@@ -265,7 +266,7 @@ public class FindFieldTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 name       = d
 decl class = class test.FindFieldTest
@@ -288,7 +289,7 @@ modifiers  =
 
 앞의 예제는 정보를 얻는 것이지만, 아래와 같이 처리하면 이름을 이용하여 메소드를 call 할 수 있음
 
-- 실행 예제
+[실행 코드]
 ```java
 public class InvokeMethodTest {
 	public int add(int a, int b){
@@ -328,7 +329,7 @@ public class InvokeMethodTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 84
 ```
@@ -337,7 +338,7 @@ public class InvokeMethodTest {
 
 생성자를 invoke 함으로써 새 객체를 생성할 수 있음
 
-- 실행 코드
+[실행 코드]
 ```java
 public class CreateNewInstanceTest {
 
@@ -373,14 +374,14 @@ public class CreateNewInstanceTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 a = 37 b = 47
 ```
 
 #### 2.7. 필드 값 변경
 
-- 실행 코드
+[실행 코드]
 ```java
 public class ChangeFieldTest {
 	public double d;
@@ -410,7 +411,7 @@ public class ChangeFieldTest {
 }
 ```
 
-- 실행 결과
+[실행 결과]
 ```
 d = 0.0
 d = 12.34
@@ -418,7 +419,7 @@ d = 12.34
 
 #### 2.8. Array 사용하기
 
-- 실행 코드_01
+[실행 코드]
 ```java
 public class ArrayTest1 {
 	public static void main(String args[]){
@@ -441,7 +442,7 @@ public class ArrayTest1 {
 }
 ```
 
-- 실행 결과_01
+[실행 결과]
 ```
 this is a test
 ```
