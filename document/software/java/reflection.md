@@ -348,7 +348,7 @@ public class CreateNewInstanceTest {
   public static void main(String args[]){
     try {
       // 클래스 정보 가져오기
-      Class cls = Class.forName("tie.example.reflection.CreateNewInstanceTest");
+      Class cls = Class.forName("test.CreateNewInstanceTest");
 
       // 파라미터 Class 정보 생성
       Class partypes[] = new Class[2];
@@ -385,7 +385,7 @@ public class ChangeFieldTest {
   public static void main(String args[]){
     try {
       // 클래스 정보 가져오기
-      Class cls = Class.forName("tie.example.reflection.ChangeFieldTest");
+      Class cls = Class.forName("test.ChangeFieldTest");
 
       // 필드 정보 가져오기
       Field fld = cls.getField("d");
