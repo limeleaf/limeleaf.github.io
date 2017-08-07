@@ -43,7 +43,7 @@ System.out.println(m[0].toString());
 #### 1.2. 실행 예
 
 [실행 코드]
-```Java
+```java
 public class DumpMethods {
    public static void main(String args[])
    {
@@ -61,7 +61,7 @@ public class DumpMethods {
 ```
 
 [실행 결과]
-```java
+```
 public synchronized java.lang.Object java.util.Stack.pop()
 public java.lang.Object java.util.Stack.push(java.lang.Object)
 public boolean java.util.Stack.empty()
