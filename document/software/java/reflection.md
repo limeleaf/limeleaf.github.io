@@ -80,21 +80,21 @@ Class.isInstance 메소드를 이용하면 인수로 전달받은 객체가 자�
 [실행 코드]
 ```java
 public class InstanceOfTest {
-	public static void main(String args[]) {
-		try {
-			Class cls = Class.forName("test.A");
+  public static void main(String args[]) {
+    try {
+      Class cls = Class.forName("test.A");
+      
+      // 생성된 객체가 A 클래스의 Instance가 아님
+      boolean b1 = cls.isInstance(new Integer(37));
+      System.out.println(b1);
 
-            // 생성된 객체가 A 클래스의 Instance가 아님
-			boolean b1 = cls.isInstance(new Integer(37));
-			System.out.println(b1);
-
-            // 생성된 객체가 A 클래스의 Instance임
-			boolean b2 = cls.isInstance(new A());
-			System.out.println(b2);
-		} catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+      // 생성된 객체가 A 클래스의 Instance임
+      boolean b2 = cls.isInstance(new A());
+      System.out.println(b2);
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -112,46 +112,45 @@ true
 ```java
 public class FindMethodTest {
 
-	private int f1(Object p, int x) throws NullPointerException {
-		if (p == null) {
-			throw new NullPointerException();
-		}
-		return x;
-	}
+  private int f1(Object p, int x) throws NullPointerException {
+    if (p == null) {
+      throw new NullPointerException();
+    }
+    return x;
+  }
 
-	public static void main(String args[]) {
-		try {
-			Class cls = Class.forName("test.FindMethodTest");
+  public static void main(String args[]) {
+    try {
+      Class cls = Class.forName("test.FindMethodTest");
+      
+      // 전체 Declared 메소드 목록 가져오기
+      // (public, protected, package 및 private 메서드가 포함됨)
+      Method methlist[] = cls.getDeclaredMethods();
+      for (int i = 0; i < methlist.length; i++) {
 
-			// 전체 Declared 메소드 목록 가져오기
-            // (public, protected, package 및 private 메서드가 포함됨)
-			Method methlist[] = cls.getDeclaredMethods();
-			for (int i = 0; i < methlist.length; i++) {
+        // (1) 메소드 기본 정보 출력
+        Method m = methlist[i];
+        System.out.println("name        = " + m.getName());
+        System.out.println("decl class  = " + m.getDeclaringClass());
 
-				// (1) 메소드 기본 정보 출력
-				Method m = methlist[i];
-				System.out.println("name        = " + m.getName());
-				System.out.println("decl class  = " + m.getDeclaringClass());
+        // (2) 메소드의 파라미터 타입 정보 출력
+        Class pvec[] = m.getParameterTypes();
+        for (int j = 0; j < pvec.length; j++)
+        System.out.println("param #" + j + "    = " + pvec[j]);
 
-				// (2) 메소드의 파라미터 타입 정보 출력
-				Class pvec[] = m.getParameterTypes();
-				for (int j = 0; j < pvec.length; j++)
-					System.out.println("param #" + j + "    = " + pvec[j]);
+        // (3) 메소드가 throw하는 Exception 타입 정보 출력
+        Class evec[] = m.getExceptionTypes();
+        for (int j = 0; j < evec.length; j++)
+        System.out.println("exc #" + j + "      = " + evec[j]);
 
-				// (3) 메소드가 throw하는 Exception 타입 정보 출력
-				Class evec[] = m.getExceptionTypes();
-				for (int j = 0; j < evec.length; j++)
-					System.out.println("exc #" + j + "      = " + evec[j]);
-
-				// (4) 메소드 리턴 타입 정보 출력
-				System.out.println("return type = " + m.getReturnType());
-				System.out.println("------------------------");
-			}
-		}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+        // (4) 메소드 리턴 타입 정보 출력
+        System.out.println("return type = " + m.getReturnType());
+        System.out.println("------------------------");
+      }
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -179,41 +178,41 @@ return type = int
 ```java
 public class ObtainConstructorInfoTest {
 
-    // 첫 번째 생성자
-	public ObtainConstructorInfoTest() {}
+  // 첫 번째 생성자
+  public ObtainConstructorInfoTest() {}
 
-	// 두 번째 생성자
-	protected ObtainConstructorInfoTest(int i, double d){}
+  // 두 번째 생성자
+  protected ObtainConstructorInfoTest(int i, double d){}
 
-	public static void main(String args[]) {
+  public static void main(String args[]) {
     try {
-			Class cls = Class.forName("test.ObtainConstructorInfoTest");
+      Class cls = Class.forName("test.ObtainConstructorInfoTest");
 
-			// 생성자 목록 가져오기
-			Constructor ctorlist[] = cls.getDeclaredConstructors();
-			for (int i = 0; i < ctorlist.length; i++) {
+      // 생성자 목록 가져오기
+      Constructor ctorlist[] = cls.getDeclaredConstructors();
+      for (int i = 0; i < ctorlist.length; i++) {
 
-				// 생성자 기본 정보 출력
-				Constructor ct = ctorlist[i];
-				System.out.println("name       = " + ct.getName());
-				System.out.println("decl class = " + ct.getDeclaringClass());
+        // 생성자 기본 정보 출력
+        Constructor ct = ctorlist[i];
+        System.out.println("name       = " + ct.getName());
+        System.out.println("decl class = " + ct.getDeclaringClass());
 
-				// 생성자 파라미터 타입 정보 출력
-				Class pvec[] = ct.getParameterTypes();
-				for (int j = 0; j < pvec.length; j++)
-					System.out.println("param #" + j + "   = " + pvec[j]);
+        // 생성자 파라미터 타입 정보 출력
+        Class pvec[] = ct.getParameterTypes();
+        for (int j = 0; j < pvec.length; j++)
+          System.out.println("param #" + j + "   = " + pvec[j]);
 
-				// 생성자 Exceotuion 타입 정보 출력
-				Class evec[] = ct.getExceptionTypes();
-				for (int j = 0; j < evec.length; j++)
-					System.out.println("exc #" + j + "   = " + evec[j]);
-					System.out.println("-----");
-				}
-			}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+        // 생성자 Exceotuion 타입 정보 출력
+        Class evec[] = ct.getExceptionTypes();
+        for (int j = 0; j < evec.length; j++)
+          System.out.println("exc #" + j + "   = " + evec[j]);
+
+        System.out.println("-----");
+      }
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -237,32 +236,31 @@ param #1   = double
 ```java
 public class FindFieldTest {
 
-	private double d;
-	public static final int i = 37;
-	String s = "testing";
+  private double d;
+  public static final int i = 37;
+  String s = "testing";
 
-	public static void main(String args[]){
-		try {
-			Class cls = Class.forName("test.FindFieldTest");
+  public static void main(String args[]){
+    try {
+      Class cls = Class.forName("test.FindFieldTest");
 
-			// 클래스 내에 정의된 Field 목록 가져오기
-			Field fieldlist[] = cls.getDeclaredFields();
-			for (int i = 0; i < fieldlist.length; i++) {
-
-				// Field 기본 정보 출력
-				Field fld = fieldlist[i];
-				System.out.println("name       = " + fld.getName());
-				System.out.println("decl class = " + fld.getDeclaringClass());
-				System.out.println("type       = " + fld.getType());
-				int mod = fld.getModifiers();
-				System.out.println("modifiers  = " + Modifier.toString(mod));
-				System.out.println("-----");
-			}
-		}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+      // 클래스 내에 정의된 Field 목록 가져오기
+      Field fieldlist[] = cls.getDeclaredFields();
+      for (int i = 0; i < fieldlist.length; i++) {
+      
+        // Field 기본 정보 출력
+        Field fld = fieldlist[i];
+        System.out.println("name       = " + fld.getName());
+        System.out.println("decl class = " + fld.getDeclaringClass());
+        System.out.println("type       = " + fld.getType());
+        int mod = fld.getModifiers();
+        System.out.println("modifiers  = " + Modifier.toString(mod));
+        System.out.println("-----");
+      }
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -292,40 +290,39 @@ modifiers  =
 [실행 코드]
 ```java
 public class InvokeMethodTest {
-	public int add(int a, int b){
-		return a + b;
-	}
+  public int add(int a, int b){
+    return a + b;
+  }
 
-	public static void main(String args[]){
-		try {
-			// 클래스 정보 가져오기
-			Class cls = Class.forName("test.InvokeMethodTest");
+  public static void main(String args[]){
+    try {
+      // 클래스 정보 가져오기
+      Class cls = Class.forName("test.InvokeMethodTest");
 
-			// Invoke할 메소드의 두 파라미터 타입
-			Class partypes[] = new Class[2];
-			partypes[0] = Integer.TYPE;
-			partypes[1] = Integer.TYPE;
+      // Invoke할 메소드의 두 파라미터 타입
+      Class partypes[] = new Class[2];
+      partypes[0] = Integer.TYPE;
+      partypes[1] = Integer.TYPE;
 
-			//위의 두 파라미터 타입을 가지고, 이름이 add인 메소드 정보를 얻어옴
-			Method meth = cls.getMethod("add", partypes);
+      //위의 두 파라미터 타입을 가지고, 이름이 add인 메소드 정보를 얻어옴
+      Method meth = cls.getMethod("add", partypes);
 
-			// 인스턴스 생성
-			InvokeMethodTest methobj = (InvokeMethodTest)cls.newInstance();
+      // 인스턴스 생성
+      InvokeMethodTest methobj = (InvokeMethodTest)cls.newInstance();
 
-			// 인수로 전달할 값 세팅
-			Object arglist[] = new Object[2];
-			arglist[0] = new Integer(37);
-			arglist[1] = new Integer(47);
+      // 인수로 전달할 값 세팅
+      Object arglist[] = new Object[2];
+      arglist[0] = new Integer(37);
+      arglist[1] = new Integer(47);
 
-			// 메소드를 invoke한 후, 리턴 값을 출력
-			Object retobj = meth.invoke(methobj, arglist);
-			Integer retval = (Integer)retobj;
-			System.out.println(retval.intValue());
-		}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+      // 메소드를 invoke한 후, 리턴 값을 출력
+      Object retobj = meth.invoke(methobj, arglist);
+      Integer retval = (Integer)retobj;
+      System.out.println(retval.intValue());
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -342,35 +339,34 @@ public class InvokeMethodTest {
 ```java
 public class CreateNewInstanceTest {
 
-	public CreateNewInstanceTest(){}
+  public CreateNewInstanceTest(){}
 
-	public CreateNewInstanceTest(int a, int b){
-		System.out.println("a = " + a + " b = " + b);
-	}
+  public CreateNewInstanceTest(int a, int b){
+    System.out.println("a = " + a + " b = " + b);
+  }
 
-	public static void main(String args[]){
-		try {
-			// 클래스 정보 가져오기
-			Class cls = Class.forName("tie.example.reflection.CreateNewInstanceTest");
+  public static void main(String args[]){
+    try {
+      // 클래스 정보 가져오기
+      Class cls = Class.forName("tie.example.reflection.CreateNewInstanceTest");
 
-			// 파라미터 Class 정보 생성
-			Class partypes[] = new Class[2];
-			partypes[0] = Integer.TYPE;
-			partypes[1] = Integer.TYPE;
+      // 파라미터 Class 정보 생성
+      Class partypes[] = new Class[2];
+      partypes[0] = Integer.TYPE;
+      partypes[1] = Integer.TYPE;
 
-			// 위에서 생성한 파라미터를 사용하는 생성자 정보를 가져옴
-			Constructor ct = cls.getConstructor(partypes);
+      // 위에서 생성한 파라미터를 사용하는 생성자 정보를 가져옴
+      Constructor ct = cls.getConstructor(partypes);
 
-			// 파라미터 값을 전달하며 생성자를 호출하여 객체를 생성함
-			Object arglist[] = new Object[2];
-			arglist[0] = new Integer(37);
-			arglist[1] = new Integer(47);
-			Object retobj = ct.newInstance(arglist);
-		}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+      // 파라미터 값을 전달하며 생성자를 호출하여 객체를 생성함
+      Object arglist[] = new Object[2];
+      arglist[0] = new Integer(37);
+      arglist[1] = new Integer(47);
+      Object retobj = ct.newInstance(arglist);
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -384,30 +380,29 @@ a = 37 b = 47
 [실행 코드]
 ```java
 public class ChangeFieldTest {
-	public double d;
+  public double d;
 
-	public static void main(String args[]){
-		try {
-			// 클래스 정보 가져오기
-			Class cls = Class.forName("tie.example.reflection.ChangeFieldTest");
+  public static void main(String args[]){
+    try {
+      // 클래스 정보 가져오기
+      Class cls = Class.forName("tie.example.reflection.ChangeFieldTest");
 
-			// 필드 정보 가져오기
-			Field fld = cls.getField("d");
+      // 필드 정보 가져오기
+      Field fld = cls.getField("d");
 
-			// 객체 생성하기
-			ChangeFieldTest obj = new ChangeFieldTest();
+      // 객체 생성하기
+      ChangeFieldTest obj = new ChangeFieldTest();
 
-			// 초기 field 값 출력
-			System.out.println("d = " + obj.d);
+      // 초기 field 값 출력
+      System.out.println("d = " + obj.d);
 
-			// field 값 변경 후 출력
-			fld.setDouble(obj, 12.34);
-			System.out.println("d = " + obj.d);
-		}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+      // field 값 변경 후 출력
+      fld.setDouble(obj, 12.34);
+      System.out.println("d = " + obj.d);
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
@@ -422,23 +417,22 @@ d = 12.34
 [실행 코드]
 ```java
 public class ArrayTest1 {
-	public static void main(String args[]){
-		try {
-			// 클래스 정보 가져오기
-			Class cls = Class.forName("java.lang.String");
+  public static void main(String args[]){
+    try {
+      // 클래스 정보 가져오기
+      Class cls = Class.forName("java.lang.String");
 
-			// String 객체를 담을 수 있는 10개 짜리 배열 객체를 생성
-			Object arr = Array.newInstance(cls, 10);
+      // String 객체를 담을 수 있는 10개 짜리 배열 객체를 생성
+      Object arr = Array.newInstance(cls, 10);
 
-			// 5번째에 문자열을 삽입하고 꺼내어 출력
-			Array.set(arr, 5, "this is a test");
-			String s = (String)Array.get(arr, 5);
-			System.out.println(s);
-		}
-		catch (Throwable e) {
-			System.err.println(e);
-		}
-	}
+      // 5번째에 문자열을 삽입하고 꺼내어 출력
+      Array.set(arr, 5, "this is a test");
+      String s = (String)Array.get(arr, 5);
+      System.out.println(s);
+    } catch (Throwable e) {
+      System.err.println(e);
+    }
+  }
 }
 ```
 
