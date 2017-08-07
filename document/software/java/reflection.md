@@ -3,23 +3,23 @@
 목차
 
 1. [Reflection 개념](#reflection-개념)
-1. [Reflection 사용하기](#reflection-사용하기)
-1.1 instanceof Operator 시뮬레이션 하기
-1.2 클래스의 메소드 찾기
-1.3 클래스의 생산자 찾기
-1.4 클래스의 필드 찾기
-1.5 이름을 이용하여 메소드 invoke
-1.6 생산자를 Invoke하여 객체 생성하기
-1.7 필드 값 변경
-1.8 Array 사용하기
+1. [Reflection 사용하기](#reflection-사용하기)  
+1.1 instanceof Operator 시뮬레이션 하기  
+1.2 클래스의 메소드 찾기  
+1.3 클래스의 생산자 찾기  
+1.4 클래스의 필드 찾기  
+1.5 이름을 이용하여 메소드 invoke  
+1.6 생산자를 Invoke하여 객체 생성하기  
+1.7 필드 값 변경  
+1.8 Array 사용하기  
 
 * * *
 
-### Reflection 개념
+### 1. Reflection 개념
 
 Reflection is a feature in the Java programming language. It allows **an executing Java program to examine or "introspect" upon itself**, and **manipulate internal properties** of the program. For example, it's possible for **a Java class to obtain the names of all its members and display them**.
 
-#### 1. Reflection 사용 방법
+#### 1.1. Reflection 사용 방법
 
 Method 클래스와 같은 Reflection 클래스는 java.lang.reflect 패키지 하위에 있음. 이런 클래스를 사용하기 위한 세 Step이 있음.
 
@@ -40,7 +40,7 @@ Method m[] = c.getDeclaredMethods();
 System.out.println(m[0].toString());
 ```
 
-#### 2. 실행 예
+#### 1.2. 실행 예
 
 - 실행 코드
 ```Java
@@ -71,9 +71,9 @@ public synchronized int java.util.Stack.search(java.lang.Object)
 
 * * *
 
-### Reflection 사용하기
+### 2. Reflection 사용하기
 
-#### 1. instanceof Operator 시뮬레이션 하기
+#### 2.1. instanceof Operator 시뮬레이션 하기
 
 Class.isInstance 메소드를 이용하면 인수로 전달받은 객체가 자신 클래스의 Instance인지 확인 가능
 
@@ -83,9 +83,13 @@ public class InstanceOfTest {
 	public static void main(String args[]) {
 		try {
 			Class cls = Class.forName("test.A");
-			boolean b1 = cls.isInstance(new Integer(37)); // 생성된 객체가 A 클래스의 Instance가 아님
+
+            // 생성된 객체가 A 클래스의 Instance가 아님
+			boolean b1 = cls.isInstance(new Integer(37));
 			System.out.println(b1);
-			boolean b2 = cls.isInstance(new A()); // 생성된 객체가 A 클래스의 Instance임
+
+            // 생성된 객체가 A 클래스의 Instance임
+			boolean b2 = cls.isInstance(new A());
 			System.out.println(b2);
 		} catch (Throwable e) {
 			System.err.println(e);
@@ -100,7 +104,7 @@ false
 true
 ```
 
-#### 2. 클래스의 메소드 찾기
+#### 2.2. 클래스의 메소드 찾기
 
 아래와 같이, 클래스 내에서 정의된 메소드를 찾을 수 있음
 
@@ -166,7 +170,7 @@ return type = int
 ------------------------
 ```
 
-#### 3. 클래스의 생산자 찾기
+#### 2.3. 클래스의 생산자 찾기
 
 메소드를 찾는 방식과 유사하게, 아래와 같이 실행
 
@@ -174,7 +178,7 @@ return type = int
 ```java
 public class ObtainConstructorInfoTest {
 
-  // 첫 번째 생성자
+    // 첫 번째 생성자
 	public ObtainConstructorInfoTest() {}
 
 	// 두 번째 생성자
@@ -224,7 +228,7 @@ param #1   = double
 -----
 ```
 
-#### 4. 클래스의 필드 찾기
+#### 2.4. 클래스의 필드 찾기
 
 클래스에 정의된 필드를 찾으려면 아래와 같이 처리
 
@@ -280,7 +284,7 @@ modifiers  =
 -----
 ```
 
-#### 5. 이름을 이용하여 메소드 invoke
+#### 2.5. 이름을 이용하여 메소드 invoke
 
 앞의 예제는 정보를 얻는 것이지만, 아래와 같이 처리하면 이름을 이용하여 메소드를 call 할 수 있음
 
@@ -329,7 +333,7 @@ public class InvokeMethodTest {
 84
 ```
 
-#### 6. 생산자를 Invoke하여 객체 생성하기
+#### 2.6. 생산자를 Invoke하여 객체 생성하기
 
 생성자를 invoke 함으로써 새 객체를 생성할 수 있음
 
@@ -374,7 +378,7 @@ public class CreateNewInstanceTest {
 a = 37 b = 47
 ```
 
-#### 7. 필드 값 변경
+#### 2.7. 필드 값 변경
 
 - 실행 코드
 ```java
@@ -412,7 +416,7 @@ d = 0.0
 d = 12.34
 ```
 
-#### 8. Array 사용하기
+#### 2.8. Array 사용하기
 
 - 실행 코드_01
 ```java
