@@ -9,7 +9,8 @@
 
 ### 자격증 정보
 
-- [Amazon 공식 사이트(외부링크)](https://aws.amazon.com/ko/certification/certified-solutions-architect-associate/)
+- [Amazon 공식 사이트(외부링크) - 기본정보](https://aws.amazon.com/ko/certification/certified-solutions-architect-associate/)
+- [Amazon 공식 사이트(외부링크) - FAQ](https://aws.amazon.com/ko/certification/faqs/)
 
 ### 자격증 학습
 
