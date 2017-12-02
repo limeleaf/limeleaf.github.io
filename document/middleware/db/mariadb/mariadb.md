@@ -3,7 +3,7 @@
 목차
 
 1. [설치](#설치)
-1. [사용](#사용)
+1. [기본 사용](#사용)
 
 * * *
 
@@ -150,7 +150,7 @@ MariaDB [(none)]> DROP DATABASE testdb;
 MariaDB [(none)]> GRANT SHOW DATABASES ON *.* TO 'dbtester'@'%' IDENTIFIED BY 'dbtester01';
 Query OK, 0 rows affected (0.00 sec)
 
-MariaDB [(none)]> GRANT all ON test.* TO 'dbtester'@'%';
+MariaDB [(none)]> GRANT ALL ON testdb.* TO 'dbtester'@'%';
 Query OK, 0 rows affected (0.00 sec)
 
 MariaDB [(none)]> FLUSH PRIVILEGES;
