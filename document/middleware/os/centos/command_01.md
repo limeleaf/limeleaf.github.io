@@ -148,7 +148,8 @@ exit                          # sftp 종료
 
 ### Disk 관리
 
-- 남은 용량 확인하기: df
+#### * 남은 Disk 용량 확인하기: df
+
 ```bash
 ]$ df -h -T   
 Filesystem          Type      Size  Used Avail Use% Mounted on
@@ -164,7 +165,7 @@ tmpfs               tmpfs     184M   12K  184M   1% /run/user/1000
 > -T, --print-type : print file system type
 
 
-- 사용량 확인하기: du(disk usage)
+#### * Disk 사용량 확인하기: du(disk usage)
 ```bash
 ]$ du      # 현재 경로 하위의 모든 디렉토리의 사용량 확인(Default,KB)
 ]$ du -h   # 현재 경로 하위의 모든 디렉토리의 사용량 확인(보기좋은 단위로 표시)
