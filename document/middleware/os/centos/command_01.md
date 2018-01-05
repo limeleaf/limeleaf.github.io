@@ -161,7 +161,7 @@ tmpfs               tmpfs     920M     0  920M   0% /sys/fs/cgroup
 /dev/sda1           xfs      1014M  172M  843M  17% /boot
 tmpfs               tmpfs     184M   12K  184M   1% /run/user/1000
 ```
-> -h, --human-readable : print sizes in human readable format (e.g., 1K 234M 2G)
+> -h, --human-readable : print sizes in human readable format (e.g., 1K 234M 2G)  
 > -T, --print-type : print file system type
 
 
