@@ -2,12 +2,12 @@
 
 목차
 
-1. [설치](#설치)
-1. [기본 사용](#사용)
+1. [설치하기](#설치하기)
+1. [사용하기](#사용하기)
 
 * * *
 
-### 1. 설치
+### 설치하기
 
 (바이너리 파일 설치 기준)
 
@@ -60,7 +60,7 @@ datadir = /{경로}/mariadb/data
 
 * * *
 
-### 2. 사용
+### 사용하기
 
 #### 2.1. 로컬에서 사용자 root로 접속하기
 
@@ -156,7 +156,14 @@ Query OK, 0 rows affected (0.00 sec)
 MariaDB [(none)]> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ```
-#### 2.7. 샘플 데이터베이스 만들기
+
+#### 2.7. 데이터베이스 사용하기
+```mysql
+MariaDB [(none)]> USE testdb;
+MariaDB [(testdb)]>
+```
+
+#### 2.8. 샘플 데이터베이스 만들기
 
 샘플 데이터 URL: https://github.com/datacharmer/test_db
 ```bash

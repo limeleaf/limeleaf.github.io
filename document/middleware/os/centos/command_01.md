@@ -7,6 +7,7 @@
 1. [Group 관리](#group-관리)
 1. [파일 관리](#파일-관리)
 1. [네트워크 관련](#네트워크-관련)
+1. [Disk 관리](#disk-관리)
 
 * * *
 
@@ -142,6 +143,35 @@ get aaa.tar.gz                # 상대 Server의  aaa.tar.gz 파일을 �
 lls                           # 내 Server에서 수행하는 ls 명령어
 exit                          # sftp 종료
 ```
+
+* * *
+
+### Disk 관리
+
+- 남은 용량 확인하기: df
+```bash
+]$ df -h -T   
+Filesystem          Type      Size  Used Avail Use% Mounted on
+/dev/mapper/cl-root xfs        31G  7.7G   23G  26% /
+devtmpfs            devtmpfs  905M     0  905M   0% /dev
+tmpfs               tmpfs     920M  100K  920M   1% /dev/shm
+tmpfs               tmpfs     920M  8.8M  912M   1% /run
+tmpfs               tmpfs     920M     0  920M   0% /sys/fs/cgroup
+/dev/sda1           xfs      1014M  172M  843M  17% /boot
+tmpfs               tmpfs     184M   12K  184M   1% /run/user/1000
+```
+> -h, --human-readable : print sizes in human readable format (e.g., 1K 234M 2G)
+> -T, --print-type : print file system type
+
+
+- 사용량 확인하기: du(disk usage)
+```bash
+]$ du      # 현재 경로 하위의 모든 디렉토리의 사용량 확인(Default,KB)
+]$ du -h   # 현재 경로 하위의 모든 디렉토리의 사용량 확인(보기좋은 단위로 표시)
+]$ du -sh ./   # 해당 디렉토리 사용량 총합 확인
+]$ du -sh ./*  # 해당 디렉토리의 바로 하위 디렉토리들의 사용량만 확인
+```
+> -s, --summarize : display only a total for each argument
 
 * * *
 
