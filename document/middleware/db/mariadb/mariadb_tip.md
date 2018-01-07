@@ -3,6 +3,7 @@
 목차
 
 1. [MariaDB Connector/J](#mariadb-connector/j)
+1. [테이블명 대소문자 구분안하게 하기](#테이블명-대소문자-구분안하게-하기)
 1. [인코딩 맞추기](#인코딩-맞추기)
 
 * * *
@@ -14,8 +15,33 @@ https://downloads.mariadb.org/connector-java/
 
 #### 2. 기억해 두면 좋은 버전별 특징
 
-- 1.6이상 버전에서, PrepareStatement, ResultSet 구현체의 이름이 변경됨
-  - TODO:
+1) 변경된 PrepareStatement, ResultSet 구현체
+    - 1.5.x
+    ```java
+    org.mariadb.jdbc.internal.queryresults.resultset.MariaSelectResultSet
+    ```
+
+    - 1.6.x
+    ```java
+    org.mariadb.jdbc.MariaDbPreparedStatementClient
+  	org.mariadb.jdbc.MariaDbPreparedStatementServer
+  	org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet
+    ```
+    - 1.7.x
+    ```java
+    org.mariadb.jdbc.internal.com.read.resultset.UpdatableResultSet
+    ```
+
+* * *
+
+### 테이블명 대소문자 구분안하게 하기
+
+* my.ini 파일에 아래 내용 추가
+
+```text
+[mysqld]
+lower_case_table_names=1
+```
 
 * * *
 

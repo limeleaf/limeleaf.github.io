@@ -83,4 +83,8 @@
 - [git 개요](/document/software/git/git)
 
 ### 5.2. markdown
-- [git 개요](/document/software/markdown/markdown)
+- [markdown 개요](/document/software/markdown/markdown)
+
+### 5.4. Weka
+
+### 5.5. R

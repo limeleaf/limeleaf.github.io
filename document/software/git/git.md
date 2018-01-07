@@ -18,8 +18,11 @@
 ```bash
 ]$ git status
 ```
-
-3. git add
+3. git diff
+```bash
+]$ git diff HEAD
+```
+4. git add
 ```bash
 ]$ git add *
 ```
@@ -28,12 +31,12 @@
 ]$ git add {파일명}
 ```
 
-4. git commit
+5. git commit
 ```bash
 ]$ git commit -m "{comment}"
 ```
 
-5. git push
+6. git push
 ```bash
 ]$ git push origin master
 ```
