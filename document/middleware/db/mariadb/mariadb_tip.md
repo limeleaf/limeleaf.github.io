@@ -13,24 +13,24 @@
 #### 1. Download URL
 https://downloads.mariadb.org/connector-java/
 
-#### 2. 기억해 두면 좋은 버전별 특징
+#### 2. 변경된 PrepareStatement, ResultSet 구현체
 
-1) 변경된 PrepareStatement, ResultSet 구현체
-    - 1.5.x
-    ```java
-    org.mariadb.jdbc.internal.queryresults.resultset.MariaSelectResultSet
-    ```
+1.5.x
+```java
+org.mariadb.jdbc.internal.queryresults.resultset.MariaSelectResultSet
+```
 
-    - 1.6.x
-    ```java
-    org.mariadb.jdbc.MariaDbPreparedStatementClient
-  	org.mariadb.jdbc.MariaDbPreparedStatementServer
-  	org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet
-    ```
-    - 1.7.x
-    ```java
-    org.mariadb.jdbc.internal.com.read.resultset.UpdatableResultSet
-    ```
+1.6.x
+```java
+org.mariadb.jdbc.MariaDbPreparedStatementClient
+org.mariadb.jdbc.MariaDbPreparedStatementServer
+org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet
+```
+    
+1.7.x
+```java
+org.mariadb.jdbc.internal.com.read.resultset.UpdatableResultSet
+```
 
 * * *
 
