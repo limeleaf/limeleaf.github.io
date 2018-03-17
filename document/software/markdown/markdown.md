@@ -71,7 +71,7 @@ Markdown is a lightweight markup language with plain text formatting syntax. It 
 >1. 두 번째 내용
 >1. 세 번째 내용
 
-- 순번이 없는 목록(맨 앞이 숫자이기만 하면 됨)
+- 순번이 없는 목록
 ```text
 - 첫 번째 내용
 - 두 번째 내용
@@ -81,7 +81,7 @@ Markdown is a lightweight markup language with plain text formatting syntax. It 
 >- 두 번째 내용
 >- 세 번째 내용
 
-- 순번이 없는 들여쓰기 목록(맨 앞이 숫자이기만 하면 됨)
+- 순번이 없는 들여쓰기 목록
 ```text
 - 첫 번째 내용
   - 두 번째 내용

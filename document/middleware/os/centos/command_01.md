@@ -60,6 +60,21 @@ root :  x  :  0  :  0  :  root  :  /root  :  /bin/bash
 ]$ userdel -r 유저명  # 지정한 User 삭제(홈 디렉토리도 함께 삭제)
 ```
 
+#### * sudo 권한 부여
+
+root 계정으로 아래 진행
+```bash
+]$ cat /etc/sudoers   # sudo 설정 파일 내용 확인
+  ~~ 중략 ~~
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+  ~~ 중략 ~~
+]$ chmod 755 /etc/sudoers # 파일 수정을 위해 퍼미션 변경(기존:440)
+]$ vi /etc/sudoers        # 파일에 [userid] ALL=(ALL:ALL) ALL 와 같이 사용자 계정 추가
+$ chmod 440 /etc/sudoers  # 파일 수정을 위해 퍼미션 원복
+```
+
+
 * * *
 
 ### Password 관리
@@ -143,6 +158,21 @@ get aaa.tar.gz                # 상대 Server의  aaa.tar.gz 파일을 �
 lls                           # 내 Server에서 수행하는 ls 명령어
 exit                          # sftp 종료
 ```
+
+#### * nslookup 으로 Name Server 관련 조회
+```bash
+]$ nslookup google.com
+Server:         210.220.163.82
+Address:        210.220.163.82#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 211.49.146.118
+Name:   google.com
+Address: 211.49.146.119
+  ~~ 중략 ~~
+```
+> 설명: TODO
 
 * * *
 

@@ -88,6 +88,11 @@
 ### 5.4. Weka
 
 ### 5.5. R
+- [R 개요](/document/software/r/r)
+- [R 사용하기](/document/software/r/r_use)
 
 ### 5.6. ELK
 - [ELK 개요](/document/software/elk/elk)
+
+### 5.7. Apache Jmeter
+- [Jmeter 개요](/document/software/jmeter/jmeter)
