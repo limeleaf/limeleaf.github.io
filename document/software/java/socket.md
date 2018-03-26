@@ -23,7 +23,7 @@ public class TestSocketServer {
 			Socket socket = serverSocket.accept();
 
 			try{
-	            InputStream in =socket.getInputStream();
+	            		InputStream in =socket.getInputStream();
 				OutputStream out = socket.getOutputStream();
 
 				br = new BufferedReader(new InputStreamReader(in));
@@ -32,7 +32,7 @@ public class TestSocketServer {
 				String line = null;
 				while ((line = br.readLine()) != null) {
 					if(line.equals("q")){
-			            break;
+			            		break;
 					}
 					System.out.println(line);
 				}
@@ -44,9 +44,9 @@ public class TestSocketServer {
 			}finally{
 				try {
 					socket.close();
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
+	            		} catch (IOException e) {
+	                		e.printStackTrace();
+	            		}
 
 			}
 		}
@@ -58,15 +58,15 @@ public class TestSocketServer {
 ```java
 public class TestSocketClient {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
 		Socket socket = null;
 		BufferedReader br;
-	    PrintWriter pw;
+	    	PrintWriter pw;
 
 		try {
 			socket = new Socket("127.0.0.1", 8080);
-            InputStream in =socket.getInputStream();
+			InputStream in =socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 
 			br = new BufferedReader(new InputStreamReader(in));
@@ -75,9 +75,9 @@ public class TestSocketClient {
 			pw.println("여보세요");
 			pw.println("안녕하세요");
 			pw.println("q");
-		    pw.flush();
+			pw.flush();
 
-		    System.out.println(br.readLine());
+			System.out.println(br.readLine());
 
 		} catch (Exception e) {
 			e.printStackTrace();
