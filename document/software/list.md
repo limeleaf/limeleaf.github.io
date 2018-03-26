@@ -48,6 +48,10 @@
 - GC 분석하기
 - SWAP Memory
 
+#### 3.1.7 기타
+- [Socket](/document/software/java/socket)
+- [Thread](/document/software/java/thread)
+
 ### 3.2. RxJava
 
 ### 3.3. Python
@@ -57,7 +61,7 @@
 ## 4. Framework
 
 ### 4.1. Spring Framework
-- IoC와 ID
+- [Spring IoC와 ID](/document/software/framework/spring-framework/spring-ioc-di)
 - [Spring 개요](/document/software/framework/spring-framework/spring-Introducing)
 - Spring Configuration
 - Spring AOP
