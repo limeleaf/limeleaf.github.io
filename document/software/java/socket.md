@@ -19,37 +19,37 @@ public class TestSocketServer {
     BufferedReader br;
     PrintWriter pw;
 
-		while(true){
-			Socket socket = serverSocket.accept();
+    while(true){
+      Socket socket = serverSocket.accept();
 
-			try{
-				InputStream in =socket.getInputStream();
-				OutputStream out = socket.getOutputStream();
+      try{
+        InputStream in =socket.getInputStream();
+        OutputStream out = socket.getOutputStream();
 
-				br = new BufferedReader(new InputStreamReader(in));
-				pw = new PrintWriter(new OutputStreamWriter(out));
+        br = new BufferedReader(new InputStreamReader(in));
+        pw = new PrintWriter(new OutputStreamWriter(out));
 
-				String line = null;
-				while ((line = br.readLine()) != null) {
-					if(line.equals("q")){
-						break;
-					}
-					System.out.println(line);
-				}
-				pw.println("읽기 완료!!");
-				pw.flush();
+        String line = null;
+        while ((line = br.readLine()) != null) {
+          if(line.equals("q")){
+            break;
+          }
+          System.out.println(line);
+        }
+        pw.println("읽기 완료!!");
+        pw.flush();
 
-			}catch(Exception e){
-				e.printStackTrace();
-			}finally{
-				try {
-					socket.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-	}
+      } catch(Exception e){
+        e.printStackTrace();
+      } finally{
+        try {
+          socket.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+  }
 }
 ```
 #### 2. Socket Client
@@ -59,35 +59,35 @@ public class TestSocketClient {
 
   public static void main(String[] args) {
 
-		Socket socket = null;
-		BufferedReader br;
-		PrintWriter pw;
+    Socket socket = null;
+    BufferedReader br;
+    PrintWriter pw;
 
-		try {
-			socket = new Socket("127.0.0.1", 8080);
-			InputStream in =socket.getInputStream();
-			OutputStream out = socket.getOutputStream();
+    try {
+      socket = new Socket("127.0.0.1", 8080);
+      InputStream in =socket.getInputStream();
+      OutputStream out = socket.getOutputStream();
 
-			br = new BufferedReader(new InputStreamReader(in));
-			pw = new PrintWriter(new OutputStreamWriter(out));
+      br = new BufferedReader(new InputStreamReader(in));
+      pw = new PrintWriter(new OutputStreamWriter(out));
 
-			pw.println("여보세요");
-			pw.println("안녕하세요");
-			pw.println("q");
-			pw.flush();
+      pw.println("여보세요");
+      pw.println("안녕하세요");
+      pw.println("q");
+      pw.flush();
 
-			System.out.println(br.readLine());
+      System.out.println(br.readLine());
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				socket.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      try {
+        socket.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+  }
 }
 ```
 
@@ -96,63 +96,63 @@ public class TestSocketClient {
 ```Java
 public class TestSocketServerWithThreadPool {
 
-	public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-		ServerSocket serverSocket = new ServerSocket(8080);
-		ExecutorService executor = Executors.newFixedThreadPool(10);
+    ServerSocket serverSocket = new ServerSocket(8080);
+    ExecutorService executor = Executors.newFixedThreadPool(10);
 
-		while(true){
-			Socket socket = serverSocket.accept();
-			try{
-				executor.execute(new SocketConnection(socket));
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}
-	}
+    while(true){
+      Socket socket = serverSocket.accept();
+      try{
+        executor.execute(new SocketConnection(socket));
+      } catch(Exception e){
+        e.printStackTrace();
+      }
+    }
+  }
 }
 
 class SocketConnection implements Runnable{
 
-	private Socket socket = null;
+  private Socket socket = null;
 
-	public SocketConnection(Socket socket) {
-		this.socket = socket;
-	}
+  public SocketConnection(Socket socket) {
+    this.socket = socket;
+  }
 
-	@Override
-	public void run() {
+  @Override
+  public void run() {
 
-		BufferedReader br;
-		PrintWriter pw;
+    BufferedReader br;
+    PrintWriter pw;
 
-		try{
-			InputStream in =socket.getInputStream();
-			OutputStream out = socket.getOutputStream();
+    try{
+      InputStream in =socket.getInputStream();
+      OutputStream out = socket.getOutputStream();
 
-			br = new BufferedReader(new InputStreamReader(in));
-			pw = new PrintWriter(new OutputStreamWriter(out));
+      br = new BufferedReader(new InputStreamReader(in));
+      pw = new PrintWriter(new OutputStreamWriter(out));
 
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				if(line.equals("q")){
-					break;
-				}
-				System.out.println(line);
-			}
-			pw.println("읽기 완료!!");
-			pw.flush();
+      String line = null;
+      while ((line = br.readLine()) != null) {
+        if(line.equals("q")){
+          break;
+        }
+        System.out.println(line);
+      }
+      pw.println("읽기 완료!!");
+      pw.flush();
 
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			try {
-				socket.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+    } catch(Exception e) {
+      e.printStackTrace();
+    } finally {
+      try {
+        socket.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+  }
 }
 ```
 
