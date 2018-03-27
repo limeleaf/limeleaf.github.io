@@ -97,47 +97,46 @@ public class TestFileReadWrite {
 ```Java
 public class TestRandomAccess {
 
-	public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-		RandomAccessFile rf = new RandomAccessFile("./resources/test-in.txt","rw");
-		String line = "";
+    RandomAccessFile rf = new RandomAccessFile("./resources/test-in.txt","rw");
+    String line = "";
 
-		System.out.println("(1) File의 길이 : " + rf.length());
+    System.out.println("(1) File의 길이 : " + rf.length());
 
-		// A
-		// BC
-		// DEF
-		System.out.println("(2) File의 내용 : ");
-		while ((line = rf.readLine()) != null) {
-			System.out.println("-> " + line);			
-		}
+    // A
+    // BC
+    // DEF
+    System.out.println("(2) File의 내용 : ");
+    while ((line = rf.readLine()) != null) {
+      System.out.println("-> " + line);			
+    }
 
-		System.out.println("(3) 원하는 곳에 접근해 값 가져오기 : ");
-		rf.seek(0);
-		System.out.println("-> " + (char)rf.read()); // A
+    System.out.println("(3) 원하는 곳에 접근해 값 가져오기 : ");
+    rf.seek(0);
+    System.out.println("-> " + (char)rf.read()); // A
 
-		rf.seek(1);
-		System.out.println("-> " + rf.read());	// CR
+    rf.seek(1);
+    System.out.println("-> " + rf.read());	// CR
 
-		rf.seek(2);
-		System.out.println("-> " + rf.read());  // LF
+    rf.seek(2);
+    System.out.println("-> " + rf.read());  // LF
 
-		rf.seek(3);
-		System.out.println("-> " + (char)rf.read()); // B
-		rf.write('Z');								// 덮어 쓰기
+    rf.seek(3);
+    System.out.println("-> " + (char)rf.read()); // B
+    rf.write('Z');								// 덮어 쓰기
 
-		// A
-		// BZ
-		// DEF
-		System.out.println("(4) 수정된 File의 내용 : ");
-		rf.seek(0);
-		while ((line = rf.readLine()) != null) {
-			System.out.println("-> " + line);			
-		}
+    // A
+    // BZ
+    // DEF
+    System.out.println("(4) 수정된 File의 내용 : ");
+    rf.seek(0);
+    while ((line = rf.readLine()) != null) {
+      System.out.println("-> " + line);			
+    }
 
-		rf.close();
-	}
-
+    rf.close();
+  }
 }
 ```
 
