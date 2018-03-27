@@ -13,11 +13,11 @@
 ```java
 public class TestSocketServer {
 
-	public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-		ServerSocket serverSocket = new ServerSocket(8080);
-		BufferedReader br;
-		PrintWriter pw;
+    ServerSocket serverSocket = new ServerSocket(8080);
+    BufferedReader br;
+    PrintWriter pw;
 
 		while(true){
 			Socket socket = serverSocket.accept();
