@@ -17,13 +17,13 @@ public class TestSocketServer {
 
 		ServerSocket serverSocket = new ServerSocket(8080);
 		BufferedReader br;
-	    PrintWriter pw;
+		PrintWriter pw;
 
 		while(true){
 			Socket socket = serverSocket.accept();
 
 			try{
-	            		InputStream in =socket.getInputStream();
+				InputStream in =socket.getInputStream();
 				OutputStream out = socket.getOutputStream();
 
 				br = new BufferedReader(new InputStreamReader(in));
@@ -32,7 +32,7 @@ public class TestSocketServer {
 				String line = null;
 				while ((line = br.readLine()) != null) {
 					if(line.equals("q")){
-			            		break;
+						break;
 					}
 					System.out.println(line);
 				}
@@ -44,10 +44,9 @@ public class TestSocketServer {
 			}finally{
 				try {
 					socket.close();
-	            		} catch (IOException e) {
-	                		e.printStackTrace();
-	            		}
-
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
@@ -62,7 +61,7 @@ public class TestSocketClient {
 
 		Socket socket = null;
 		BufferedReader br;
-	    	PrintWriter pw;
+		PrintWriter pw;
 
 		try {
 			socket = new Socket("127.0.0.1", 8080);
@@ -102,7 +101,7 @@ public class TestSocketServerWithThreadPool {
 		ServerSocket serverSocket = new ServerSocket(8080);
 		ExecutorService executor = Executors.newFixedThreadPool(10);
 
-	    while(true){
+		while(true){
 			Socket socket = serverSocket.accept();
 			try{
 				executor.execute(new SocketConnection(socket));
@@ -125,10 +124,10 @@ class SocketConnection implements Runnable{
 	public void run() {
 
 		BufferedReader br;
-	    PrintWriter pw;
+		PrintWriter pw;
 
 		try{
-            InputStream in =socket.getInputStream();
+			InputStream in =socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 
 			br = new BufferedReader(new InputStreamReader(in));
@@ -137,7 +136,7 @@ class SocketConnection implements Runnable{
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				if(line.equals("q")){
-		            break;
+					break;
 				}
 				System.out.println(line);
 			}
@@ -149,10 +148,9 @@ class SocketConnection implements Runnable{
 		}finally{
 			try {
 				socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
