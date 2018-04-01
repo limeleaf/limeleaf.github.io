@@ -1,5 +1,12 @@
 ## 1. Algorithm
 
+### 1.1. Matrix
+
+#### 1.1. Array를 사용한 Matrix 다루기
+- [Matrix 채우기](/document\software\algorithm\matrix_01)
+- [Matrix 회전하기](/document\software\algorithm\matrix_02)
+- [Matrix 대칭변환하기](/document\software\algorithm\matrix_03)
+
 * * *
 
 ## 2. Design pattern
