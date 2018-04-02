@@ -11,7 +11,7 @@
 
 ### 공통 출력 로직
 
-```Java
+```java
 public class MatrixTest01 {
   public static void main(String[] args) {
 
@@ -33,6 +33,7 @@ public class MatrixTest01 {
 #### 1. 시계 방향으로 돌면서 채우기
 
 - 코드
+
 ```java
 public static int[][] rightSnail(int rowNun, int colNum) {
 
@@ -85,15 +86,17 @@ public static int[][] rightSnail(int rowNun, int colNum) {
 ```
 
 - 실행 결과
-> [1, 2, 3, 4]
-[10, 11, 12, 5]
-[9, 8, 7, 6]
+
+> [1, 2, 3, 4]  
+[10, 11, 12, 5]  
+[9, 8, 7, 6]  
 
 
 #### 2. 반시계 방향으로 돌면서 채우기
 
 - 코드
-```Java
+
+```java
 public static int[][] leftSnail(int rowNun, int colNum) {
 
   int result[][] = new int[rowNun][colNum];
@@ -146,15 +149,17 @@ public static int[][] leftSnail(int rowNun, int colNum) {
 ```
 
 - 실행 결과
-> [1, 10, 9, 8]
-[2, 11, 12, 7]
-[3, 4, 5, 6]
+
+> [1, 10, 9, 8]  
+[2, 11, 12, 7]  
+[3, 4, 5, 6]  
 
 * * *
 
 ### 지그재그로 채우기
 
 - 코드
+
 ```Java
 public static int[][] zigzag(int rowNun, int colNum) {
 
@@ -188,15 +193,17 @@ public static int[][] zigzag(int rowNun, int colNum) {
 ```
 
 - 실행 결과
-> [1, 2, 3, 4]
-[8, 7, 6, 5]
-[9, 10, 11, 12]
+
+> [1, 2, 3, 4]  
+[8, 7, 6, 5]  
+[9, 10, 11, 12]  
 
 * * *
 
 ### 대각선 방향으로 채우기
 
 - 코드
+
 ```Java
 public static int[][] diagonal(int rowNum, int colNum) {
 
@@ -224,9 +231,10 @@ public static int[][] diagonal(int rowNum, int colNum) {
 ```
 
 - 실행 결과
-> [1, 2, 4, 7]
-[3, 5, 8, 10]
-[6, 9, 11, 12]
+
+> [1, 2, 4, 7]  
+[3, 5, 8, 10]  
+[6, 9, 11, 12]  
 
 * * *
 
