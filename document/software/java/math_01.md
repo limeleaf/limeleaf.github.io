@@ -59,7 +59,8 @@ public static void main(String[] args) {
 ### 올림
 
 - 코드
-```Java
+
+```java
 public static void main(String[] args) {
 
   double num1 = 134.2342;
@@ -77,6 +78,7 @@ public static void main(String[] args) {
 ```
 
 - 실행 결과
+
 > --- 정수 자리로 올림 ---  
 > 135.0  
 > 135.0  
@@ -88,7 +90,8 @@ public static void main(String[] args) {
 ### 버림
 
 - 코드
-```Java
+
+```java
 public static void main(String[] args) {
 
   double num1 = 134.2342;
@@ -106,6 +109,7 @@ public static void main(String[] args) {
 ```
 
 - 실행 결과
+
 > --- 정수 자리로 버림 ---  
 > 134.0  
 > 134.0  
@@ -117,7 +121,8 @@ public static void main(String[] args) {
 ### 절대값
 
 - 코드
-```Java
+
+```java
 public static void main(String[] args) {
 
   double num1 = 134.2342;
@@ -135,6 +140,7 @@ public static void main(String[] args) {
 ```
 
 - 실행 결과
+
 > --- 절대값 ---  
 > 134.2342  
 > 134.2342  
@@ -146,7 +152,8 @@ public static void main(String[] args) {
 ### 자릿수 맞추기
 
 - 코드
-```Java
+
+```java
 public static void main(String[] args) {
 
   double num1 = 134.2342;
@@ -165,6 +172,7 @@ public static void main(String[] args) {
 ```
 
 - 실행 결과
+
 > --- 고정 자리 맞추기 ---  
 > 0000012345  
 > 0000000134.234  
