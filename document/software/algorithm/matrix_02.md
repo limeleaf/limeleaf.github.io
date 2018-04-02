@@ -16,28 +16,28 @@ public class MatrixTest01 {
   public static void main(String[] args) {
 
     int rowNum = 5;
-		int colNum = 4;
+    int colNum = 4;
 
-		// 초기 데이터 세팅
-		System.out.println("*** 초기 값 ***");
-		int arr[][] = new int[rowNum][colNum];
-		int count = 0;
-		for (int row = 0; row < rowNum; row++) {
-			for (int col = 0; col < colNum; col++) {
-				arr[row][col]=count;
-				count++;
-			}
-		}
-		for (int idx = 0; idx < arr.length; idx++) {
-			System.out.println(Arrays.toString(arr[idx]));
-		}
+    // 초기 데이터 세팅
+    System.out.println("*** 초기 값 ***");
+    int arr[][] = new int[rowNum][colNum];
+    int count = 0;
+    for (int row = 0; row < rowNum; row++) {
+      for (int col = 0; col < colNum; col++) {
+        arr[row][col]=count;
+        count++;
+      }
+    }
+    for (int idx = 0; idx < arr.length; idx++) {
+      System.out.println(Arrays.toString(arr[idx]));
+    }
 
-		// (1) 시계 방향으로 90도 회전
-		System.out.println("*** 시계방향 90도 회전 ***");
-		int rotateArr90[][] = rotate90(arr);
-		for (int idx = 0; idx < rotateArr90.length; idx++) {
-			System.out.println(Arrays.toString(rotateArr90[idx]));
-		}
+    // (1) 시계 방향으로 90도 회전
+    System.out.println("*** 시계방향 90도 회전 ***");
+    int rotateArr90[][] = rotate90(arr);
+    for (int idx = 0; idx < rotateArr90.length; idx++) {
+      System.out.println(Arrays.toString(rotateArr90[idx]));
+    }
   }
 }
 ```
