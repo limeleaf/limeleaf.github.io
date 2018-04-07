@@ -3,9 +3,28 @@
 ### 1.1. Matrix
 
 #### 1.1. Array를 사용한 Matrix 다루기
-- [Matrix 채우기](/document\software\algorithm\matrix_01)
-- [Matrix 회전하기](/document\software\algorithm\matrix_02)
-- [Matrix 대칭변환하기](/document\software\algorithm\matrix_03)
+- [Matrix 채우기](/document/software/algorithm/matrix_01)
+- [Matrix 회전하기](/document/software/algorithm/matrix_02)
+- [Matrix 대칭변환하기](/document/software/algorithm/matrix_03)
+
+### 1.2. 경우의 수
+- [순열과 조합](/document/software/algorithm/number_of_cases)
+
+### 1.3. 정렬
+- [선택 정렬]
+- [삽입 정렬]
+- [버블 정렬]
+- [결합 정렬]
+- [퀵 정렬]
+
+### 1.4. Hash
+
+### 1.5. Tree
+- [이진 탐색 트리 (Binary Search Tree)](/document/software/algorithm/binary_search_tree)
+
+### 1.6. Grape
+
+### 1.7. 재귀
 
 * * *
 

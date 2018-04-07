@@ -4,6 +4,7 @@
 
 1. [사용자 입력 처리](#사용자-입력-처리)
 1. [File 입출력](#file-입출력)
+1. [File 조회](#file-조회)
 
 * * *
 
@@ -137,6 +138,44 @@ public class TestRandomAccess {
 
     rf.close();
   }
+}
+```
+
+* * *
+
+### File 조회
+
+- 코드
+
+```java
+public class SearchFilesTest {
+
+	public static void main(String[] args) throws IOException {
+		int depth = 0;
+		subDirList("./", depth);
+	}
+
+	public static void subDirList(String source, int depth) throws IOException {
+
+		File dir = new File(source);
+		File[] fileList = dir.listFiles();
+
+		String preFix = "";
+		for (int idx = 0; idx < depth; idx++) {
+			preFix = preFix + " ";
+		}
+
+		for (int i = 0; i < fileList.length; i++) {
+			File file = fileList[i];
+
+			if (file.isFile()) {
+				System.out.println(preFix + " -" + file.getName());
+			} else if (file.isDirectory()) {
+				System.out.println(preFix + "/" + file.getName());
+				subDirList(file.getCanonicalPath().toString(), depth+1);
+			}
+		}
+	}
 }
 ```
 
