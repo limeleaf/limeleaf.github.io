@@ -69,6 +69,7 @@ class Person implements Comparable<Person> {
 ```
 
 - 실행 결과  
+
 > 57
 
 * * *
