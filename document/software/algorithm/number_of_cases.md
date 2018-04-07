@@ -9,11 +9,11 @@
 ### 순열과 조합
 
 - 코드
-```Java
+```java
 public class NumberOfCasesTest {
 
-	public static List<String> permutationResult = new ArrayList<String>();
-	public static Set<String> combinationResultSet = new TreeSet<String>();
+  public static List<String> permutationResult = new ArrayList<String>();
+  public static Set<String> combinationResultSet = new TreeSet<String>();
 
 	public static void main(String[] args) {
 		//char[] charArr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M' };
@@ -102,7 +102,7 @@ public class NumberOfCasesTest {
 [D, B]  
 [D, C]  
 
-> 조합  
+조합  
 [A, B]  
 [A, C]  
 [A, D]  
