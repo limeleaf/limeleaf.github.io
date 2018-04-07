@@ -101,7 +101,6 @@ public class NumberOfCasesTest {
 [D, A]  
 [D, B]  
 [D, C]  
-
 조합  
 [A, B]  
 [A, C]  
