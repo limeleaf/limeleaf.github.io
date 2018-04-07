@@ -24,7 +24,9 @@
 
 ### 1.6. Grape
 
-### 1.7. 재귀
+### 1.7. 기타
+- [재귀]
+- [Json to Vo](/document/software/algorithm/json_to_vo)
 
 * * *
 
@@ -79,6 +81,7 @@
 - [Thread](/document/software/java/thread)
 - [File](/document/software/java/file)
 - [반올림,올림,버림](/document/software/java/math_01)
+- [비트 쉬프트](/document/software/java/bit-shift)
 
 ### 3.2. RxJava
 
