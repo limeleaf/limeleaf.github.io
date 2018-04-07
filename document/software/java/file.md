@@ -95,7 +95,7 @@ public class TestFileReadWrite {
 ```
 #### 2. RandomAccessFile 이용하기
 
-```Java
+```java
 public class TestRandomAccess {
 
   public static void main(String[] args) throws IOException {
@@ -150,32 +150,32 @@ public class TestRandomAccess {
 ```java
 public class SearchFilesTest {
 
-	public static void main(String[] args) throws IOException {
-		int depth = 0;
-		subDirList("./", depth);
-	}
+  public static void main(String[] args) throws IOException {
+    int depth = 0;
+    subDirList("./", depth);
+  }
 
-	public static void subDirList(String source, int depth) throws IOException {
+  public static void subDirList(String source, int depth) throws IOException {
 
-		File dir = new File(source);
-		File[] fileList = dir.listFiles();
+    File dir = new File(source);
+    File[] fileList = dir.listFiles();
 
-		String preFix = "";
-		for (int idx = 0; idx < depth; idx++) {
-			preFix = preFix + " ";
-		}
+    String preFix = "";
+    for (int idx = 0; idx < depth; idx++) {
+      preFix = preFix + " ";
+    }
 
-		for (int i = 0; i < fileList.length; i++) {
-			File file = fileList[i];
+    for (int i = 0; i < fileList.length; i++) {
+      File file = fileList[i];
 
-			if (file.isFile()) {
-				System.out.println(preFix + " -" + file.getName());
-			} else if (file.isDirectory()) {
-				System.out.println(preFix + "/" + file.getName());
-				subDirList(file.getCanonicalPath().toString(), depth+1);
-			}
-		}
-	}
+      if (file.isFile()) {
+        System.out.println(preFix + " -" + file.getName());
+      } else if (file.isDirectory()) {
+        System.out.println(preFix + "/" + file.getName());
+        subDirList(file.getCanonicalPath().toString(), depth+1);
+      }
+    }
+  }
 }
 ```
 
