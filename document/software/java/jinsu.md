@@ -13,22 +13,22 @@
 ```java
 public class JinsuTest {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		int num = 12;
+    int num = 12;
 
-		String bin = Integer.toBinaryString(num);
-		String oct = Integer.toOctalString(num);
-		String hex = Integer.toHexString(num);
+    String bin = Integer.toBinaryString(num);
+    String oct = Integer.toOctalString(num);
+    String hex = Integer.toHexString(num);
 
-		System.out.println("10진수 -> 2진수: " + bin);
-		System.out.println("10진수 -> 8진수: " + oct);
-		System.out.println("10진수 -> 16진수: " + hex);
+    System.out.println("10진수 -> 2진수: " + bin);
+    System.out.println("10진수 -> 8진수: " + oct);
+    System.out.println("10진수 -> 16진수: " + hex);
 
-		System.out.println("2진수 -> 10진수 : " + Integer.valueOf(bin, 2));
-		System.out.println("8진수 -> 10진수 : " + Integer.valueOf(oct, 8));
-		System.out.println("16진수 -> 10진수 : " + Integer.valueOf(hex, 16));
-	}
+    System.out.println("2진수 -> 10진수 : " + Integer.valueOf(bin, 2));
+    System.out.println("8진수 -> 10진수 : " + Integer.valueOf(oct, 8));
+    System.out.println("16진수 -> 10진수 : " + Integer.valueOf(hex, 16));
+  }
 }
 ```
 
