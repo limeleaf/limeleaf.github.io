@@ -82,6 +82,7 @@
 - [File](/document/software/java/file)
 - [반올림,올림,버림](/document/software/java/math_01)
 - [비트 쉬프트](/document/software/java/bit-shift)
+- [진수 변환](/document/software/java/jinsu)
 
 ### 3.2. RxJava
 
