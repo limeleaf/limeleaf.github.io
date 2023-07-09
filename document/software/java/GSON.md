@@ -11,6 +11,7 @@
 #### 1. GSON을 활용한 JSON Data Handling 예제
 
 - 기본적인 사용법
+
 ```java
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -27,10 +28,6 @@ import com.google.gson.reflect.TypeToken;
 import gson.Response.Item;
 import gson.Response.Items;
 
-/**
- * Hello world!
- *
- */
 public class GsonConverter {
 
     public static void main( String[] args ) throws Exception {
@@ -99,6 +96,7 @@ public class GsonConverter {
 ```
 
 - Json Data 처리용 VO
+
 ```java
 import java.util.List;
 
@@ -210,6 +208,7 @@ public class Response {
 ```
 
 - Json Data
+
 ```java
 {
     "response": {
