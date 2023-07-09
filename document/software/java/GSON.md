@@ -2,7 +2,7 @@
 
 목차
 
-1. [Gson](#Gson)
+1. [GSON](#GSON)
 
 * * *
 
@@ -206,6 +206,36 @@ public class Response {
       this.code = code;
     }
   }
+}
+```
+
+- Json Data
+```java
+{
+    "response": {
+        "header": {
+            "type": "00",
+            "message": "NORMAL"
+        },
+        "body": {
+            "items": {
+                "item": [
+                    {
+                       	"name": "product-01",
+                        "id": "00",
+                        "year": 2018,
+                        "code": "P01"
+                    },
+                    {
+                        "name": "product-02",
+                        "id": "001",
+                        "year": 2006,
+                        "code": null
+                    }
+                ]
+            }
+        }
+    }
 }
 ```
 
