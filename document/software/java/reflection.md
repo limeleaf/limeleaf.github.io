@@ -3,15 +3,7 @@
 목차
 
 1. [Reflection 개념](#reflection-개념)
-1. [Reflection 사용하기](#reflection-사용하기)  
-1.1 instanceof Operator 시뮬레이션 하기  
-1.2 클래스의 메소드 찾기  
-1.3 클래스의 생성자 찾기  
-1.4 클래스의 필드 찾기  
-1.5 이름을 이용하여 메소드 invoke  
-1.6 생성자를 Invoke하여 객체 생성하기  
-1.7 필드 값 변경  
-1.8 Array 사용하기  
+1. [Reflection 사용하기](#reflection-사용하기) 
 
 * * *
 
@@ -73,7 +65,52 @@ public synchronized int java.util.Stack.search(java.lang.Object)
 
 ### 2. Reflection 사용하기
 
-#### 2.1. instanceof Operator 시뮬레이션 하기
+#### 2.1. class file / jar file 로드
+
+[실행 코드]
+```java
+public class URLClassLoaderTest {
+
+	public static void main(String args[]) throws Exception {
+
+		// Path 지정
+		String path = "./src/main/resources/test-lib";
+		
+		ArrayList<URL> urls = new ArrayList<URL>();
+		URLStreamHandler streamHandler = null;
+
+		File classPath = new File(path);
+		
+		// 디렉토리 내 class 파일 로딩 
+		urls.add(new URL(null, "file:" + classPath.getCanonicalPath() + File.separator, streamHandler));
+		
+		// 디렉토리 내 jar 파일 로딩
+		File[] files = classPath.listFiles();
+
+		for (File file : files) {
+			if (file.isFile() && file.getName().endsWith(".jar")) {
+				urls.add(new URL(null, "file:" + file.getCanonicalPath(), streamHandler));
+			}
+		}
+
+		URLClassLoader loader = new URLClassLoader((URL[]) urls.toArray(new URL[urls.size()]));
+
+		String[] classNames = { "reflection.A", "com.google.gson.JsonObject" };
+
+		for (String className : classNames) {
+			Class clazz = loader.loadClass(className);
+			Method m[] = clazz.getDeclaredMethods();
+			System.out.println("===========================");
+			for (int i = 0; i < m.length; i++) {
+				System.out.println(m[i].toString());
+			}
+			System.out.println("===========================");
+		}
+	}
+}
+```
+
+#### 2.2. instanceof Operator 시뮬레이션 하기
 
 Class.isInstance 메소드를 이용하면 인수로 전달받은 객체가 자신 클래스의 Instance인지 확인 가능
 
@@ -104,7 +141,7 @@ false
 true
 ```
 
-#### 2.2. 클래스의 메소드 찾기
+#### 2.3. 클래스의 메소드 찾기
 
 아래와 같이, 클래스 내에서 정의된 메소드를 찾을 수 있음
 
@@ -170,7 +207,7 @@ return type = int
 ------------------------
 ```
 
-#### 2.3. 클래스의 생성자 찾기
+#### 2.4. 클래스의 생성자 찾기
 
 메소드를 찾는 방식과 유사하게, 아래와 같이 실행
 
@@ -228,7 +265,7 @@ param #1   = double
 -----
 ```
 
-#### 2.4. 클래스의 필드 찾기
+#### 2.5. 클래스의 필드 찾기
 
 클래스에 정의된 필드를 찾으려면 아래와 같이 처리
 
@@ -283,7 +320,7 @@ modifiers  =
 -----
 ```
 
-#### 2.5. 이름을 이용하여 메소드 invoke
+#### 2.6. 이름을 이용하여 메소드 invoke
 
 앞의 예제는 정보를 얻는 것이지만, 아래와 같이 처리하면 이름을 이용하여 메소드를 call 할 수 있음
 
@@ -331,7 +368,7 @@ public class InvokeMethodTest {
 84
 ```
 
-#### 2.6. 생성자를 Invoke하여 객체 생성하기
+#### 2.7. 생성자를 Invoke하여 객체 생성하기
 
 생성자를 invoke 함으로써 새 객체를 생성할 수 있음
 
@@ -375,7 +412,7 @@ public class CreateNewInstanceTest {
 a = 37 b = 47
 ```
 
-#### 2.7. 필드 값 변경
+#### 2.8. 필드 값 변경
 
 [실행 코드]
 ```java
@@ -412,7 +449,7 @@ d = 0.0
 d = 12.34
 ```
 
-#### 2.8. Array 사용하기
+#### 2.9. Array 사용하기
 
 [실행 코드]
 ```java
